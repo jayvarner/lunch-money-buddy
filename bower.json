@@ -1,0 +1,7 @@
+{
+  "name": "lunch-money-budy",
+  "dependencies": {
+    "semantic-ui": "^2.2.13",
+    "material-design-lite": "~1.0.4"
+  }
+}

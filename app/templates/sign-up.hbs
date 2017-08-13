@@ -1,0 +1,21 @@
+<div class='modal {{if showSignUpModal 'showing'}}'>
+  <div class='modal-content'>
+    <div class='row'>
+      {{mdl-icon icon='check_circle'}}
+    </div>
+    <div class='row'>
+      <h3>Account Confirmed</h3>
+    </div>
+    <div class='row'>
+      {{mdl-button isRaised=true text='Login' isAccent=true action='login'}}
+    </div>
+  </div>
+</div>
+<h5>Welcome To</h5>
+{{#login-form}}
+{{mdl-textfield label='Password' value='jorge@hawalius.com' disabled='disabled'}}
+{{mdl-textfield label='Password' value='************' disabled='disabled'}}
+{{mdl-textfield label='Password' value='12345678' disabled='disabled'}} {{mdl-icon icon='help_outline'}}
+
+{{mdl-button action=(toggle "showSignUpModal" this)isRaised=true text='Login' isAccent=true}}
+{{/login-form}}

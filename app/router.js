@@ -7,6 +7,10 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('index', {path: '/'});
+  this.route('pwreset');
+  this.route('sign-up');
+  this.route('kid', {path: '/kid/:kid_id'});
 });
 
 export default Router;

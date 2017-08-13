@@ -1,0 +1,136 @@
+@import 'devices';
+@import 'material-design-lite';
+@import 'simple-grid';
+
+$text-color: #757575;
+$green: #4CAF50;
+$red: #F44336;
+$light-grey: #EEEEEE;
+$dark-grey: #616161;
+
+:root {
+  padding: 5em;
+}
+
+.screen {
+  background-color: white;
+  font-size: 18px;
+
+  .modal {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.78);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .modal-content {
+    height: 90%;
+    width: 90%;
+    background-color: white;
+    margin: 5%;
+    border-radius: 5px;
+    display: inline-block;
+
+    .row {
+      text-align: center;
+
+      .icon {
+        font-size: 5em;
+        color: #4CAF50;
+        padding: 0 35% .5em;
+      }
+    }
+
+
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  color: $text-color;
+}
+
+.mdl-layout--large-screen-only {
+  display: none;
+}
+
+.profile {
+  font-size: 4em !important;
+}
+
+a {
+  .row {
+    background-color: $light-grey;
+    margin-top: 1em;
+  }
+}
+
+.row {
+  color: $text-color;
+  height: 1.5em;
+  margin-top: 2em;
+  padding: 1em;
+
+  &.header {
+    height: 4em;
+
+    h3 {
+      margin: 0;
+    }
+  }
+
+  div {
+    clear: none;
+    float: left;
+  }
+
+  // .list-col {
+  //   padding: .5em 0;
+  //   font-size: 1.25em;
+    text-align: left;
+  // }
+
+  .balance {
+    color: $green;
+    text-align: right;
+
+    &.low {
+      color: $red;
+    }
+  }
+
+  .action {
+    text-align: right;
+  }
+}
+.login-form {
+  padding: 2em;
+
+  a {
+    text-transform: uppercase;
+  }
+
+  section {
+    padding: 1em;
+  }
+}
+
+footer {
+    /* just for demo */
+    background-color: $dark-grey;
+    // border-top: 1px solid #E7E7E7;
+    text-align:center;
+    // padding:20px;
+   /* just for demo */
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3em;
+    width: 100%;
+}

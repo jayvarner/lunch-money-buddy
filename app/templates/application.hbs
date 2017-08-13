@@ -1,5 +1,19 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
-
-{{outlet}}
+<div class="marvel-device nexus5">
+    <div class="top-bar"></div>
+    <div class="sleep"></div>
+    <div class="volume"></div>
+    <div class="camera"></div>
+    <div class="screen grid">
+      {{#if globals.authenticated}}
+      {{#mdl-nav title='Lunch Money Buddy' fixedHeader=true}}
+        {{mdl-nav-item name='Profile'   route=''}}
+        {{mdl-nav-item name='Account'      route=''}}
+        {{mdl-nav-item name='Logout'       route=''}}
+          {{outlet}}
+      {{/mdl-nav}}
+      <footer>Hey, I'm the fixed footer :)</footer>
+      {{else}}
+      {{outlet}}
+      {{/if}}
+    </div>
+</div>
