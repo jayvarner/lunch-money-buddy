@@ -133,4 +133,9 @@ footer {
     bottom: 0;
     height: 3em;
     width: 100%;
+    padding: 1em 0 !important;
+
+    a {
+      color: $light-grey;
+    }
 }

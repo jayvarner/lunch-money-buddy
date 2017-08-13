@@ -17,6 +17,8 @@ export default function() {
 
     this.get('/kids');
     this.get('/kid/:id');
+    this.get('/methods');
+    this.get('/method');
     // this.post('/posts');
     this.get('/kids/:id');
     // this.put('/posts/:id'); // or this.patch

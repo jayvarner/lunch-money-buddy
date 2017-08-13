@@ -7,45 +7,4 @@
     {{model.school}}
   </div>
 </div>
-{{#link-to 'index'}}
-
-<div class='row'>
-  <div class='one-fifth'>
-    {{mdl-icon icon='local_dining'}}
-  </div>
-  <div class='three-fifths'>
-    Lunches
-  </div>
-  <div class='one-fifth action'>
-    <i class="material-icons">keyboard_arrow_right</i>
-  </div>
-</div>
-{{/link-to}}
-
-{{#link-to 'index'}}
-<div class='row'>
-  <div class='one-fifth'>
-    {{mdl-icon icon='local_atm'}}
-  </div>
-  <div class='three-fifths'>
-    Payment Methods
-  </div>
-  <div class='one-fifth action'>
-    <i class="material-icons">keyboard_arrow_right</i>
-  </div>
-</div>
-{{/link-to}}
-
-{{#link-to 'index'}}
-<div class='row'>
-  <div class='one-fifth'>
-    {{mdl-icon icon='settings'}}
-  </div>
-  <div class='three-fifths'>
-    Diet
-  </div>
-  <div class='one-fifth action'>
-    <i class="material-icons">keyboard_arrow_right</i>
-  </div>
-</div>
-{{/link-to}}
+{{outlet}}

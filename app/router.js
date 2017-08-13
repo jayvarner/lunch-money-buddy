@@ -10,7 +10,13 @@ Router.map(function() {
   this.route('index', {path: '/'});
   this.route('pwreset');
   this.route('sign-up');
-  this.route('kid', {path: '/kid/:kid_id'});
+  this.route('kid', {
+      path: '/kid/:kid_id'
+  }, function() {
+      this.route('index', { path: '/'});
+      this.route('methods');
+  });
+  // this.route('kids', function() {});
 });
 
 export default Router;

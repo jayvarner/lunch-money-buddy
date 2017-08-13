@@ -11,7 +11,9 @@
         {{mdl-nav-item name='Logout'       route=''}}
           {{outlet}}
       {{/mdl-nav}}
-      <footer>Hey, I'm the fixed footer :)</footer>
+      <footer class='row'>
+        {{#link-to 'index'}}{{mdl-icon icon='home'}}{{/link-to}}
+      </footer>
       {{else}}
       {{outlet}}
       {{/if}}
