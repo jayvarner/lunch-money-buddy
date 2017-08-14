@@ -1,4 +1,6 @@
 import Ember from 'ember';
+// import SessionMixin from '../mixins/session';
 
-export default Ember.Route.extend({
-});
+const { Route } = Ember;
+
+export default Route.extend({});

@@ -1,10 +1,10 @@
 <div class='row header'>
   <div class='golden-small'>
-    {{mdl-icon icon='face' class='profile'}}
+    {{#link-to 'kid'}}{{mdl-icon icon='face' class='profile'}}{{/link-to}}
   </div>
   <div class='golden-large'>
-    <h3>{{model.name}}</h3>
-    {{model.school}}
+    <h3>{{model.kid.name}}</h3>
+    {{model.kid.school}}
   </div>
 </div>
 {{outlet}}

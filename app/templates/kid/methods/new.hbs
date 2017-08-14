@@ -1,0 +1,13 @@
+<h5>Add New Method</h5>
+<select onchange={{action (route-action 'setType' 'event.target' model.method)}}>
+  <option>Select Method</option>
+  {{#each model.types as |type|}}
+    <option value={{type.id}}>{{type.name}}</option>
+  {{/each}}
+</select>
+!!{{model.method.methodtype.name}}!!
+{{#if model.method.methodtype.name}}
+{{#method-form model=model.method}}
+
+{{/method-form}}
+{{/if}}

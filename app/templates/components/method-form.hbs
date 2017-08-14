@@ -1,0 +1,38 @@
+{{yield}}
+<div class='row content-table'>
+  {{!-- {{#unless model.methodtype.name }} --}}
+  {{#if (eq model.methodtype.name 'Checking')}}
+  <div class='one-third'>
+    {{mdl-textfield label='Routing Number' value=model.routing}}
+  </div>
+  <div class='one-fifth'>
+    {{mdl-icon icon='help_outline' id='routing' class='routing-help help'}}
+    {{#mdl-tooltip for='routing'}}The routing number is the one that isn't the account number :){{/mdl-tooltip}}
+  </div>
+  <div class='two-fifths'>
+    {{mdl-textfield label='Account Number' value=model.number}}
+  </div>
+  {{else}}
+  <div class='whole'>
+    {{mdl-textfield label='Card Number' value=model.number}}
+  </div>
+  <div class='one-quarter'>
+    {{mdl-textfield label='Month' value=model.date_month}}
+  </div>
+  <div class='one-quarter'>
+    {{mdl-textfield label='Year' value=model.date_year }}
+  </div>
+  <div class='one-quarter'>
+    {{mdl-textfield label='CVV' value=model.cvv}}
+  </div>
+  <div class='one-quarter'>
+    {{mdl-icon icon='help_outline' id='cvv' class='help'}}
+    {{#mdl-tooltip for='cvv'}}Amazing how hard it is to find boilerplate text for a CVV help tip.{{/mdl-tooltip}}
+  </div>
+  <div class='row'>
+
+  </div>
+  {{mdl-button action=(route-action 'save' model) isRaised=true text='Save' isAccent=true}}
+  {{/if}}
+  {{!-- {{/unless}} --}}
+</div>

@@ -1,0 +1,47 @@
+<h5>Payment Methods</h5>
+<div class='row content-table'>
+  <div class='one-fifth'>
+    Default
+  </div>
+  <div class='two-fifths'>
+    Method
+  </div>
+  <div class='one-fifth'>
+    Number
+  </div>
+  <div class='one-fifth'>
+.
+  </div>
+{{!-- </div> --}}
+{{#each model.kid.kidmethod as |method|}}
+{{!-- <div class='row'> --}}
+  <div class='one-fifth'>
+    <input type='radio' name='defaultmethod' checked='{{if method.default 'checked'}}' value={{method.defaut}} / />
+  </div>
+  <div class='two-fifths'>
+    {{method.method.methodtype.name}}
+  </div>
+  <div class='one-fifth'>
+    **{{method.method.lastFour}}
+  </div>
+  <div class='one-fifth'>
+    {{#link-to 'kid.methods.edit' model.kid method}}
+    {{mdl-icon icon='mode_edit'}}
+    {{/link-to}}
+    {{mdl-icon icon='delete'}}
+  </div>
+{{/each}}
+</div>
+<hr />
+<div class='row'>
+  <div class='three-fifths'>
+    Auto Replenishment
+  </div>
+  <div class='one-fifth'>
+    {{mdl-switch value=model.kid.autopay class='push-right'}}
+  </div>
+  <div class='one-fifth'>
+    {{mdl-icon icon='settings' class='push-right'}}
+  </div>
+</div>
+{{#link-to 'kid.methods.new'}}{{mdl-button isRaised=true text='New Method' isAccent=true}}{{/link-to}}

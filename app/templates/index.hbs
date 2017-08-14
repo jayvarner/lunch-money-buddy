@@ -1,31 +1,12 @@
-{{#if globals.authenticated}}
-  {{#each model as |kid|}}
-  {{#link-to 'kid' kid.id}}
-  <div class='row'>
-    <div class='one-fifth'>
-      {{mdl-icon icon='face'}}
-    </div>
-    <div class='two-fifths'>
-      {{kid.name}}
-    </div>
-    <div class='one-fifth balance {{if (lt kid.balance 20) 'low'}}'>
-      ${{if (lt kid.balance 1) 0}}{{kid.balance}}
-    </div>
-    <div class='one-fifth action'>
-      <i class="material-icons">keyboard_arrow_right</i>
-    </div>
-  </div>
-  {{/link-to}}
-  {{/each}}
-{{else}}
 {{#login-form}}
 {{mdl-textfield label='Password' value='jorge@hawalius.com' disabled='disabled'}}
 {{mdl-textfield label='Password' value='************' disabled='disabled'}}
-{{mdl-button isRaised=true text='Login' isAccent=true action='login'}}
+{{#link-to 'kids'}}
+{{mdl-button isRaised=true text='Login' isAccent=true}}
+{{/link-to}}
 <section>
   {{#link-to 'pwreset'}}{{#mdl-button}}Forgot Password?{{/mdl-button}}{{/link-to}}
   {{#link-to 'sign-up'}}{{#mdl-button}}Don't have an account?{{/mdl-button}}{{/link-to}}
 </section>
 {{/login-form}}
-{{/if}}
-{{log globals.authenticated}}
+{{outlet}}

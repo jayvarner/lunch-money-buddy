@@ -1,7 +1,11 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-    model() {
-        return this.store.findAll('method');
+    actions: {
+        save(method) {
+            method.then((m) => {
+                m.save();
+            })
+        }
     }
 });

@@ -21,7 +21,14 @@ $dark-grey: #616161;
     background: rgba(0, 0, 0, 0.78);
     width: 100%;
     height: 100%;
-    z-index: 1;
+    top: 0;
+    z-index: 9999999999999999999999;
+    visibility: hidden;
+
+    &.showing {
+      visibility: visible;
+    }
+
   }
 
   .modal-content {
@@ -61,6 +68,7 @@ p {
 
 .profile {
   font-size: 4em !important;
+  color: $text-color;
 }
 
 a {
@@ -81,6 +89,22 @@ a {
 
     h3 {
       margin: 0;
+    }
+  }
+
+  &.content-table {
+    padding: 0;
+    font-size: .75em;
+    margin-left: .75em;
+
+    .icon {
+      // font-size: 1em;
+    }
+  }
+
+  &.headers {
+    div {
+      font-size: .75em;
     }
   }
 
@@ -108,6 +132,27 @@ a {
     text-align: right;
   }
 }
+
+footer {
+  &.row {
+    height: 3em;
+    padding: 0 !important;
+  }
+  .half {
+    color: white;
+    font-size: 1.25em;
+    display: inline-block;
+    align-items: center;
+    text-align: center;
+
+    .icon {
+      font-size: 1.25em;
+      margin: 0 43%;
+      padding-bottom: .2em;
+    }
+  }
+}
+
 .login-form {
   padding: 2em;
 
@@ -138,4 +183,17 @@ footer {
     a {
       color: $light-grey;
     }
+}
+
+.help {
+  padding-top: .5em;
+  padding-left: 1em;
+}
+
+.push-right {
+  margin-left: 50%
+}
+
+.routing-help {
+  padding-left: 0;
 }

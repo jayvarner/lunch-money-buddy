@@ -1,4 +1,18 @@
-
+{{#if (lt model.kid.balance 20)}}
+<style>.mdl-layout__header { display: none;}</style>
+<div class='modal showing'>
+  <div class='modal-content'>
+    {{mdl-icon icon='face' class='profile'}}
+    <h5>Add funds for Brenden</h5>
+    <input style='color:red' type='number' value={{model.kid.balance}} />
+    method
+    visa
+    <div class='row'>
+      {{mdl-button isRaised=true text='Confirm' isAccent=true action='login'}}
+    </div>
+  </div>
+</div>
+{{else}}
 {{#link-to 'index'}}
 <div class='row'>
   <div class='one-fifth'>
@@ -40,3 +54,4 @@
   </div>
 </div>
 {{/link-to}}
+{{/if}}

@@ -1,0 +1,22 @@
+{{log model}}
+{{!-- {{#if globals.authenticated}} --}}
+  {{#each model as |kid|}}
+  {{#link-to 'kid' kid.id}}
+  <div class='row'>
+    <div class='one-fifth'>
+      {{mdl-icon icon='face'}}
+    </div>
+    <div class='two-fifths'>
+      {{kid.name}} {{kid.id}}
+    </div>
+    {{outlet}}
+    <div class='one-fifth balance {{if (lt kid.balance 20) 'low'}}'>
+      ${{if (lt kid.balance 1) 0}}{{kid.balance}}
+    </div>
+    <div class='one-fifth action'>
+      <i class="material-icons">keyboard_arrow_right</i>
+    </div>
+  </div>
+  {{/link-to}}
+  {{/each}}
+{{!-- {{/if}} --}}
