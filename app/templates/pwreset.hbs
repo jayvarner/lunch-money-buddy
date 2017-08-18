@@ -1,8 +1,24 @@
 <style>.mdl-layout__header, .mdl-mini-footer { display: none;}</style>
-
+{{#if sent}}
+<style>.mdl-layout__header { display: none;}</style>
+<div class='modal showing'>
+  <div class='modal-content'>
+    <h4 style='style="margin: 1px;padding-top: 6em;"'>Instructions have been sent to:</h4>
+    <p>
+      <em>jorge@hawalius.com</em>
+    </p>
+    <div class='row'>
+      {{#link-to 'kids'}}
+      {{mdl-button isRaised=true text='Login' isAccent=true}}
+      {{/link-to}}
+    </div>
+  </div>
+</div>
+{{else}}
 {{#login-form}}
 {{mdl-textfield label='Password' value='jorge@hawalius.com' disabled='disabled'}}
 <section>
-  {{mdl-button isRaised=true text='Login' isAccent=true action='login'}}
+  {{mdl-button isRaised=true text='Reset Password' isAccent=true action=(toggle 'sent' this)}}
 </section>
 {{/login-form}}
+{{/if}}

@@ -6,15 +6,15 @@
     <div class="screen grid">
       {{!-- {{#if globals.authenticated}} --}}
       {{#mdl-nav title='Lunch Money Buddy' fixedHeader=true}}
-        {{mdl-nav-item name='Profile'   route=''}}
+        {{mdl-nav-item name='Kids'   route='kids'}}
         {{mdl-nav-item name='Account'      route=''}}
         {{mdl-nav-item name='Logout'       route=''}}
           {{outlet}}
       {{/mdl-nav}}
       {{#mdl-mini-footer title='My Footer'}}
   {{#mdl-footer-linklist}}
-    {{#link-to 'index' tagName='li'}}
-      Home
+    {{#link-to 'kids'}}
+      <li>fuck</li>
     {{/link-to}}
     {{#link-to 'index' tagName='li'}}
       Privacy

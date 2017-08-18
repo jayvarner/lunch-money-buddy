@@ -28,6 +28,7 @@ export default function() {
     this.get('/kidmethods');
     this.post('/kidmethods');
     this.patch('/kidmethods/:id');
+    this.patch('/kids/:id');
     this.get('/kidmethods/:id');
     // this.post('/posts');
     this.get('/kids/:id');

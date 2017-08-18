@@ -4,5 +4,9 @@ import SessionMixin from '../mixins/session';
 const { Route } = Ember;
 
 export default Route.extend(SessionMixin, {
-    
+    actions: {
+         back() {
+             history.back();
+         }
+     }
 });

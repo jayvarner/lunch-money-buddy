@@ -15,5 +15,11 @@ export default Route.extend(SessionMixin, {
             kidmethods: this.store.findAll('kidmethod'),
             types: this.store.findAll('methodtype')
         });
+    },
+
+    actions: {
+        saveDirty(dirty) {
+            dirty.save();
+        }
     }
 });

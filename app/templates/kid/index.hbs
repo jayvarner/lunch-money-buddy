@@ -1,14 +1,15 @@
-{{#if (lt model.kid.balance 20)}}
+{{#if (or (lt model.kid.balance 20) model.kid.hasDirtyAttributes)}}
 <style>.mdl-layout__header { display: none;}</style>
 <div class='modal showing'>
   <div class='modal-content'>
     {{mdl-icon icon='face' class='profile'}}
     <h5>Add funds for Brenden</h5>
-    <input style='color:red' type='number' value={{model.kid.balance}} />
+    {{input type='number' value=model.kid.balance class='lowbalance'}}
+    {{!-- <input style='color:red' type='number' value={{model.kid.balance}} /> --}}
     method
     visa
     <div class='row'>
-      {{mdl-button isRaised=true text='Confirm' isAccent=true action='login'}}
+      {{mdl-button isRaised=true text='Confirm' isAccent=true action=(route-action 'saveDirty' model.kid)}}
     </div>
   </div>
 </div>

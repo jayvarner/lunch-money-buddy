@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Route.extend({
     model() {
         return Ember.RSVP.hash({
-            method: this.store.createRecord('method', {methodtype: this.store.peekRecord('methodtype', 4)}),
+            method: this.store.createRecord('method'),
             types: this.store.peekAll('methodtype')
         });
     },

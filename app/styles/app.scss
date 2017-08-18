@@ -197,3 +197,19 @@ footer {
 .routing-help {
   padding-left: 0;
 }
+
+.lowbalance {
+  color: red;
+    margin: 0 auto;
+    margin-left: 1%;
+    font-size: 4em;
+    width: 75%;
+    text-align: center;
+}
+
+
+.mdl-mini-footer--link-list {
+  a {
+    z-index: 99999999;
+  }
+}
