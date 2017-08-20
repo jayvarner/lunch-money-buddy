@@ -85,6 +85,7 @@ a {
   padding: 1em;
 
   &.header {
+    margin-top: 0;
     height: 4em;
 
     h3 {
@@ -95,7 +96,7 @@ a {
   &.content-table {
     padding: 0;
     font-size: .75em;
-    margin-left: .75em;
+    // margin-left: .75em;
 
     .icon {
       // font-size: 1em;
@@ -198,18 +199,101 @@ footer {
   padding-left: 0;
 }
 
-.lowbalance {
-  color: red;
-    margin: 0 auto;
-    margin-left: 1%;
-    font-size: 4em;
-    width: 75%;
-    text-align: center;
+.lowbalance,
+.goodbalance {
+  margin: 0 auto;
+  margin-left: 1%;
+  font-size: 4em;
+  width: 75%;
+  text-align: center;
 }
 
+.lowbalance {
+  color: red;
+}
+
+.goodbalance {
+  color: green;
+}
 
 .mdl-mini-footer--link-list {
   a {
     z-index: 99999999;
   }
+}
+
+.feedback {
+  color: white;
+  left: 8%;
+  margin: 0 auto;
+  top: 190px;
+  width: 80%;
+  padding: .25em;
+  position: absolute;
+  transform: scaleY(0);
+  transition: all 300ms;
+
+  &.show-flash {
+    transform: scaleY(1);
+  }
+}
+
+
+
+.feedback.flash-success {
+  background-color: $green;
+}
+
+.feedback.flash-error {
+  background-color: $red;
+}
+
+table {
+  // border: 1px solid $text-color;
+  margin: 0 auto;
+  display: table;
+  color: $text-color;
+  width: 90%;
+}
+
+td {
+  border: 1px solid $text-color;
+
+}
+
+.calendar {
+  text-align: center;
+  // padding: 2px;
+
+  .one-fifth {
+    // border-bottom: 1px solid;
+    // border-right: 1px solid;
+    margin-top: 10px;
+    cursor: pointer;
+
+    &.favorite {
+      a {
+        color: white;
+      }
+    }
+
+    a {
+      text-decoration: none;
+
+    }
+
+    i {
+      color: #ff4081;
+      position: absolute;
+      z-index: -1;
+      font-size: 3em;
+      margin-left: -14px;
+      margin-top: -7px;
+    }
+  }
+}
+
+.close {
+  color: $text-color;
+  float: right;
 }

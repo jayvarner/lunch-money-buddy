@@ -1,20 +1,20 @@
-{{#if (or (lt model.kid.balance 20) model.kid.hasDirtyAttributes)}}
+{{#if (or (lt model.balance 20) model.hasDirtyAttributes)}}
 <style>.mdl-layout__header { display: none;}</style>
 <div class='modal showing'>
   <div class='modal-content'>
     {{mdl-icon icon='face' class='profile'}}
-    <h5>Add funds for Brenden</h5>
-    {{input type='number' value=model.kid.balance class='lowbalance'}}
+    <h5>Add funds for {{model.name}}</h5>
+    {{input type='number' value=model.balance class=model.balanceClass}}
     {{!-- <input style='color:red' type='number' value={{model.kid.balance}} /> --}}
     method
     visa
     <div class='row'>
-      {{mdl-button isRaised=true text='Confirm' isAccent=true action=(route-action 'saveDirty' model.kid)}}
+      {{mdl-button isRaised=true text='Confirm' isAccent=true action=(route-action 'saveDirty' model)}}
     </div>
   </div>
 </div>
 {{else}}
-{{#link-to 'index'}}
+{{#link-to 'kid.lunches'}}
 <div class='row'>
   <div class='one-fifth'>
     {{mdl-icon icon='local_dining'}}
@@ -28,7 +28,7 @@
 </div>
 {{/link-to}}
 
-{{#link-to 'kid.methods'}}
+{{#link-to 'kid.methods' model.id}}
 <div class='row'>
   <div class='one-fifth'>
     {{mdl-icon icon='local_atm'}}

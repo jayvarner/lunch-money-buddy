@@ -1,21 +1,14 @@
 <h5>Add New Method</h5>
-<select onchange={{action (mut model.method.methodtype 'event.target')}}>
+{{#unless model..methodmethodtype}}
+<select id='newoption' onchange={{action (mut model.methodmethodtype) value='target.value'}}>
   <option>Select Method</option>
-  {{#each model.types as |type|}}
-    <option value={{type.id}}>{{type.name}}</option>
-  {{/each}}
+  <option value='Visa'>Visa</option>
+  <option value='Master Card'>Master Card</option>
+  <option value='PayPal'>PayPal</option>
+    <option value='Checking'>Checking</option>
 </select>
-{{#power-select
-  options=model.types
-  onchange=(action (mut model.method))
-  selected='foo'
-  as |type|
-}}
-  <strong>{{type.name}}</strong>
-{{/power-select}}
-!!{{model.method.methodtype.name}}!!
-{{#if model.method.methodtype.name}}
+{{else}}
 {{#method-form model=model.method}}
 
 {{/method-form}}
-{{/if}}
+{{/unless}}

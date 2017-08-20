@@ -14,12 +14,17 @@ Router.map(function() {
   this.route('kid', {
       path: '/kid/:kid_id'
   }, function() {
-      this.route('methods', function() {
-          this.route('new')
-          this.route('edit', {
-              path: 'edit/:method_id'
-          })
-      });
+    this.route('methods', function() {
+        this.route('new')
+        this.route('edit', {
+            path: 'edit/:method_id'
+        })
+    });
+    this.route('lunches', function() {
+        this.route('lunch', {
+            path: 'lunch/:lunch_id'
+        });
+    });
   });
   this.route('404', {
       path: '/*wildcard'

@@ -1,7 +1,7 @@
 {{yield}}
 <div class='row content-table'>
   {{!-- {{#unless model.methodtype.name }} --}}
-  {{#if (eq model.methodtype.name 'Checking')}}
+  {{#if (eq model.methodtype 'Checking')}}
   <div class='one-third'>
     {{mdl-textfield label='Routing Number' value=model.routing}}
   </div>
@@ -29,8 +29,7 @@
     {{mdl-icon icon='help_outline' id='cvv' class='help'}}
     {{#mdl-tooltip for='cvv'}}Amazing how hard it is to find boilerplate text for a CVV help tip.{{/mdl-tooltip}}
   </div>
-    {{mdl-button action=(route-action 'save' model) isRaised=true text='Save' isAccent=true class='one-third'}}
-    {{#mdl-button isColored=false class='one-quarter' action=(route-action 'back')}}Cancel{{/mdl-button}}
   {{/if}}
-  {{!-- {{/unless}} --}}
+  {{mdl-button action=(route-action 'save' model.) isRaised=true text='Save' isAccent=true class='one-third'}}
+  {{#mdl-button isColored=false class='one-quarter' action=(route-action 'back')}}Cancel{{/mdl-button}}
 </div>

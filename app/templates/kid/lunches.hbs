@@ -1,0 +1,23 @@
+{{outlet}}
+{{#mdl-tabs active='Week'}}
+  {{#mdl-tab title='Week' class='is-active'}}
+    {{#each model as |lunch index|}}
+      <h5>{{lunch.name}}</h5>
+    {{/each}}
+  {{/mdl-tab}}
+  {{#mdl-tab title='Month'}}
+  <h4>September 2017</h4>
+  <div class='row content-table calendar'>
+    <div class='one-fifth'>M</div><div class='one-fifth'>Tu</div><div class='one-fifth'>W</div><div class='one-fifth'>Th</div><div class='one-fifth'>F</div>
+    {{#each model as |lunch index|}}
+
+  <div class='one-fifth {{if (array-contains lunch.kidIds kid.id) 'favorite'}}'>
+    <i class="material-icons">{{if (array-contains lunch.kidIds kid.id) 'favorite'}}</i>
+    {{!-- {{if (lt kid.balance 1) 0}}{{kid.balance}} --}}
+    {{#link-to 'kid.lunches.lunch' lunch.id}}{{lunch.nday}}{{/link-to}}
+  </div>
+
+  {{/each}}
+  </div>
+  {{/mdl-tab}}
+{{/mdl-tabs}}

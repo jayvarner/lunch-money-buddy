@@ -3,8 +3,9 @@
     {{#link-to 'kid'}}{{mdl-icon icon='face' class='profile'}}{{/link-to}}
   </div>
   <div class='golden-large'>
-    <h3>{{if model.kid.name model.kid.name}}</h3>
-    {{model.kid.school}}
+    <h3>{{if model.name model.name}}</h3>
+    {{model.school}}
   </div>
 </div>
+{{flash-message}}
 {{outlet}}

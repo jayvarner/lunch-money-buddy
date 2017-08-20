@@ -1,8 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-
     model(params) {
-        return this.store.findRecord('payment_method', params.method_id);
+        return this.store.findRecord('lunch', params.lunch_id);
     }
 });

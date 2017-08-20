@@ -1,7 +1,7 @@
 import Ember from 'ember';
 import SessionMixin from '../mixins/session';
 
-const { Route, RSVP, get, inject: { service } } = Ember;
+const { Route, get, inject: { service } } = Ember;
 
 export default Route.extend(SessionMixin, {
     globals: service(),
@@ -10,15 +10,12 @@ export default Route.extend(SessionMixin, {
     },
 
     model(params) {
-        return RSVP.hash({
-            kid: this.store.findRecord('kid', params.kid_id),
-            kidmethods: this.store.findAll('kidmethod'),
-            types: this.store.findAll('methodtype')
-        });
+        return this.store.findRecord('kid', params.kid_id);
     },
 
     actions: {
         saveDirty(dirty) {
+            console.log('dirty', dirty);
             dirty.save();
         }
     }
