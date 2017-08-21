@@ -9,7 +9,11 @@
       {{/link-to}}
     </div>
     <br />
-  <h3>{{model.name}}</h3>
+  <h3>{{model.name}}
+  <div class='one-fifth {{if (array-contains lunch.kidIds kid.id) 'favorite'}}' onclick={{action (route-action 'addFavorite' kid=kid.id lunch=lunch.id)}}>
+
+    <i class="material-icons">favorite</i>
+  </div></h3>
   <p style='padding:0 1em; color:black; font-size:1.1em;'>
     {{model.description}}
   </p>

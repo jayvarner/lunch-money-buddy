@@ -1,23 +1,24 @@
 <h5>Payment Methods</h5>
-<div class='row content-table'>
-  <div class='one-fifth'>
+<div class='row content-table' style='margin-left:.5em;'>
+  <div class='one-fifth' style='font-size:.75em;text-align:center;'>
     Default
   </div>
-  <div class='two-fifths'>
+  <div class='two-fifths' style='font-size:.75em;'>
     Method
   </div>
-  <div class='one-fifth'>
+  <div class='one-fifth' style='font-size:.75em;'>
     Number
   </div>
-  <div class='one-fifth'>
+  <div class='one-fifth' style='font-size:.75em;'>
 .
   </div>
 {{!-- </div> --}}
 {{#each model as |method|}}
 {{!-- <div class='row'> --}}
 {{#unless method.isDeleted}}
-  <div class='one-fifth'>
-    <input type='radio' name='defaultmethod' checked='{{if (eq kid.default_method method.id) 'checked'}}' value={{method.id}} onchange={{action (mut kid.default_method) method.id}}/>
+{{#if method.id}}
+  <div class='one-fifth' style='text-align:center;'>
+    <input type='radio' name='defaultmethod' checked={{if (eq kid.default_method method.id) 'checked'}} value={{method.id}} onchange={{action (mut kid.default_method) method.id}}/>
   </div>
   <div class='two-fifths'>
     {{method.methodtype}}
@@ -26,25 +27,46 @@
     **{{method.lastFour}}
   </div>
   <div class='one-fifth'>
-    {{#link-to 'kid.methods.edit' method.id}}
+    {{#link-to 'kid.methods.edit' method.id title='edit'}}
     {{mdl-icon icon='mode_edit'}}
     {{/link-to}}
-    <a {{action (route-action 'delete' method)}}>
+    <a {{action (route-action 'delete' method)}} style='cursor:pointer;' title='delete'>
       {{mdl-icon icon='delete'}}
     </a>
   </div>
+  {{/if}}
   {{/unless}}
 {{/each}}
+{{!-- </div>
+<div class='row'> --}}
+  <div class='whole'>
+    <hr style='padding-right: 1em; width: 93%' />
+  </div>
+{{!-- </div> --}}
+{{!-- <div class='row' style='padding-top:1em;'> --}}
+<div class='one-fifth' style='text-align:center;'>
+  {{mdl-switch value=kid.autopay action=(toggle kid.autopay)}}
 </div>
-<div class='row'>
-  <div class='three-fifths'>
-    Auto Replenishment
+<div class='three-fifths'>
+    Auto Pay
   </div>
-  <div class='one-fifth'>
-    {{mdl-switch value=kid.autopay class='push-right' action=(toggle kid.autopay)}}
-  </div>
-  <div class='one-fifth'>
+
+  {{!-- <div class='one-fifth'>
     {{mdl-icon icon='settings' class='push-right'}}
-  </div>
+  </div> --}}
+  <div class='whole' style='text-align:center'>
+  &nbsp;
 </div>
-{{#link-to 'kid.methods.new'}}{{mdl-button isRaised=true text='New Method' isAccent=true}}{{/link-to}}
+<div class='whole' style='text-align:center'>
+  {{#link-to 'kid.methods.new'}}{{mdl-button isRaised=true text='New Method' isAccent=true}}{{/link-to}}
+
+</div>
+</div>
+
+{{#modal-dialog
+    onClose=(action (mut isShowingBasic) false)
+}}
+  <h1>Stop! Modal Time!</h1>
+  <p>Basic</p>
+  <button onclick={{action (mut isShowingBasic) false}}>Close</button>
+{{/modal-dialog}}

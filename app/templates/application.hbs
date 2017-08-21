@@ -9,17 +9,22 @@
         {{mdl-nav-item name='Kids'   route='kids'}}
         {{mdl-nav-item name='Account'      route=''}}
         {{mdl-nav-item name='Logout'       route=''}}
+        {{!-- {{#mdl-menu align='top-right' class='right'}}
+  {{#mdl-menu-item action='menuItemClicked' amount=36.12}}Amount: 36.12{{/mdl-menu-item}}
+  {{#mdl-menu-item action='menuItemClicked' amount=4.22}}Amount: 4.22{{/mdl-menu-item}}
+  {{#mdl-menu-item action='menuItemClicked' amount=7.11}}Amount: 7.11{{/mdl-menu-item}}
+{{/mdl-menu}} --}}
           {{outlet}}
       {{/mdl-nav}}
-      {{#mdl-mini-footer title='My Footer'}}
-  {{#mdl-footer-linklist}}
+      {{#mdl-mini-footer}}
+  {{!-- {{#mdl-footer-linklist}} --}}
     {{#link-to 'kids'}}
-      <li>fuck</li>
+      <i class="material-icons">group</i> KIDS
     {{/link-to}}
-    {{#link-to 'index' tagName='li'}}
-      Privacy
+    {{#link-to 'index'}}
+      <i class="material-icons">restaurant_menu</i> LUNCHES
     {{/link-to}}
-  {{/mdl-footer-linklist}}
+  {{!-- {{/mdl-footer-linklist}} --}}
 {{/mdl-mini-footer}}
     </div>
 </div>

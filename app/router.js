@@ -25,6 +25,8 @@ Router.map(function() {
             path: 'lunch/:lunch_id'
         });
     });
+    this.route('settings');
+    this.route('restrictions');
   });
   this.route('404', {
       path: '/*wildcard'

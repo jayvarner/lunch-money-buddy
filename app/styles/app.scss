@@ -9,12 +9,24 @@ $light-grey: #EEEEEE;
 $dark-grey: #616161;
 
 :root {
+  overflow: hidden;
   padding: 5em;
+}
+
+a {
+  color: $dark-grey;
+}
+
+.marval-device {
+  .screen {
+
+  }
 }
 
 .screen {
   background-color: white;
   font-size: 18px;
+  color: $dark-grey !important;
 
   .modal {
     position: absolute;
@@ -78,6 +90,10 @@ a {
   }
 }
 
+h5 {
+  margin-top: 0;
+}
+
 .row {
   color: $text-color;
   height: 1.5em;
@@ -96,7 +112,7 @@ a {
   &.content-table {
     padding: 0;
     font-size: .75em;
-    // margin-left: .75em;
+    margin-bottom: .75em;
 
     .icon {
       // font-size: 1em;
@@ -135,6 +151,7 @@ a {
 }
 
 footer {
+  z-index: 999;
   &.row {
     height: 3em;
     padding: 0 !important;
@@ -200,7 +217,7 @@ footer {
 }
 
 .lowbalance,
-.goodbalance {
+.goodbalance, {
   margin: 0 auto;
   margin-left: 1%;
   font-size: 4em;
@@ -214,6 +231,14 @@ footer {
 
 .goodbalance {
   color: green;
+}
+
+#regular {
+  &.lowbalance,
+  &.goodbalance {
+    font-size: 2em;
+    width: 35%
+  }
 }
 
 .mdl-mini-footer--link-list {
@@ -296,4 +321,39 @@ td {
 .close {
   color: $text-color;
   float: right;
+}
+
+
+.lunch-list {
+  margin-top: 0;
+  div {
+    border-bottom: 1px solid;
+    margin: .25em 0;
+  }
+  span:nth-of-type(4) {
+    color: red;
+  }
+
+
+  .one-fifth {
+    text-align: center;
+  }
+  .favorite i {
+    color: $red;
+  }
+}
+
+
+.ember-modal-wrapper {
+  position: absolute;
+  left: 500px;
+}
+
+.mdl-switch {
+  margin-left: 15px;
+}
+
+.golden-small,
+.golden-large {
+  color: $dark-grey;
 }

@@ -12,7 +12,7 @@ export default DS.Model.extend({
             kIds.push(k.id);
         });
         return kIds;
-    }),
+    }).property('kids'),
     nday: Ember.computed(function num() {
         if (this.id < 6) {
             return this.id

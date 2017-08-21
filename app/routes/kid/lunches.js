@@ -20,6 +20,17 @@ export default Ember.Route.extend({
         didTransition() {
             // NEED TO ACTIVATE THIS
             Ember.$('.is-active').click();
+        },
+
+        addFavorite(event) {
+            // console.log('event', event.target);
+            // console.log('this', this);
+            Ember.$(event.target).css('color', 'red');
+            // const k = this.get('kid');
+            // const l = this.get('lunch');
+
+            // l.get('kidIds').push(k);
+            // console.log('this.event.target', event);
         }
     }
 });

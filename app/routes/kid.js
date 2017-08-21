@@ -15,7 +15,7 @@ export default Route.extend(SessionMixin, {
 
     actions: {
         saveDirty(dirty) {
-            console.log('dirty', dirty);
+            dirty.setProperties({showBalanceModal: false});
             dirty.save();
         }
     }

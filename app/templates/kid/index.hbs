@@ -1,4 +1,5 @@
-{{#if (or (lt model.balance 20) model.hasDirtyAttributes)}}
+{{!-- {{#if (or (lt model.balance 20) model.hasDirtyAttributes)}} --}}
+{{#if model.showBalanceModal}}
 <style>.mdl-layout__header { display: none;}</style>
 <div class='modal showing'>
   <div class='modal-content'>
@@ -14,6 +15,7 @@
   </div>
 </div>
 {{else}}
+Add Funds {{input type='number' id='regular' value=model.balance class=model.balanceClass}}
 {{#link-to 'kid.lunches'}}
 <div class='row'>
   <div class='one-fifth'>
@@ -42,13 +44,13 @@
 </div>
 {{/link-to}}
 
-{{#link-to 'index'}}
+{{#link-to 'kid.settings' model.id}}
 <div class='row'>
   <div class='one-fifth'>
     {{mdl-icon icon='settings'}}
   </div>
   <div class='three-fifths'>
-    Diet
+    Settings
   </div>
   <div class='one-fifth action'>
     <i class="material-icons">keyboard_arrow_right</i>
