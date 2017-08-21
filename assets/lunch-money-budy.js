@@ -3827,7 +3827,7 @@ define("lunch-money-budy/templates/kid/restrictions", ["exports"], function (exp
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.default = Ember.HTMLBars.template({ "id": "MTFZ8nmP", "block": "{\"statements\":[[1,[26,[\"outlet\"]],false],[0,\"\\n\"],[11,\"div\",[]],[15,\"class\",\"row\"],[13],[0,\"\\n\"],[6,[\"each\"],[[28,[\"model\"]]],null,{\"statements\":[[0,\"  \"],[11,\"div\",[]],[15,\"class\",\"whole\"],[13],[0,\"\\n    \"],[1,[33,[\"input\"],null,[[\"type\",\"checked\"],[\"checkbox\",[28,[\"r\",\"active\"]]]]],false],[0,\"\\n    \"],[1,[28,[\"r\",\"name\"]],false],[0,\"\\n  \"],[14],[0,\"\\n\"]],\"locals\":[\"r\"]},null],[14],[0,\"\\n\"]],\"locals\":[],\"named\":[],\"yields\":[],\"hasPartials\":false}", "meta": { "moduleName": "lunch-money-budy/templates/kid/restrictions.hbs" } });
+  exports.default = Ember.HTMLBars.template({ "id": "OAoJUg8g", "block": "{\"statements\":[[1,[26,[\"outlet\"]],false],[0,\"\\n\"],[11,\"h5\",[]],[13],[0,\"Diet Restrictions\"],[14],[0,\"\\n\"],[11,\"div\",[]],[15,\"class\",\"row\"],[13],[0,\"\\n\"],[6,[\"each\"],[[28,[\"model\"]]],null,{\"statements\":[[0,\"  \"],[11,\"div\",[]],[15,\"class\",\"whole\"],[13],[0,\"\\n    \"],[1,[33,[\"input\"],null,[[\"type\",\"checked\"],[\"checkbox\",[28,[\"r\",\"active\"]]]]],false],[0,\"\\n    \"],[1,[28,[\"r\",\"name\"]],false],[0,\"\\n  \"],[14],[0,\"\\n\"]],\"locals\":[\"r\"]},null],[14],[0,\"\\n\"],[6,[\"modal-dialog\"],null,[[\"onClose\"],[[33,[\"action\"],[[28,[null]],[33,[\"mut\"],[[28,[\"isShowingBasic\"]]],null],false],null]]],{\"statements\":[[0,\"  \"],[11,\"h1\",[]],[13],[0,\"Setting Diet Restrictions\"],[14],[0,\"\\n  \"],[11,\"p\",[]],[13],[0,\"This section needs more user research to determine what to include and how to organize it.\"],[14],[0,\"\\n\"]],\"locals\":[]},null]],\"locals\":[],\"named\":[],\"yields\":[],\"hasPartials\":false}", "meta": { "moduleName": "lunch-money-budy/templates/kid/restrictions.hbs" } });
 });
 define("lunch-money-budy/templates/kid/settings", ["exports"], function (exports) {
   "use strict";
@@ -3891,6 +3891,6 @@ catch(err) {
 });
 
 if (!runningTests) {
-  require("lunch-money-budy/app")["default"].create({"LOG_TRANSITIONS":true,"API_HOST":"http://lmb.ecdsweb.org","name":"lunch-money-budy","version":"0.0.0+e464468e"});
+  require("lunch-money-budy/app")["default"].create({"LOG_TRANSITIONS":true,"API_HOST":"http://lmb.ecdsweb.org","name":"lunch-money-budy","version":"0.0.0+f06ec999"});
 }
 //# sourceMappingURL=lunch-money-budy.map

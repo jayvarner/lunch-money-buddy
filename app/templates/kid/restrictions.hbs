@@ -1,4 +1,5 @@
 {{outlet}}
+<h5>Diet Restrictions</h5>
 <div class='row'>
   {{#each model as |r|}}
   <div class='whole'>
@@ -7,3 +8,7 @@
   </div>
   {{/each}}
 </div>
+{{#modal-dialog onClose=(action (mut isShowingBasic) false)}}
+  <h1>Setting Diet Restrictions</h1>
+  <p>This section needs more user research to determine what to include and how to organize it.</p>
+{{/modal-dialog}}
