@@ -6,7 +6,9 @@
     </div>
       <h3>Account Confirmed</h3>
     <div class='row'>
-      {{mdl-button isRaised=true text='Login' isAccent=true action='login'}}
+      {{#link-to 'kids'}}
+      {{mdl-button isRaised=true text='Login' isAccent=true}}
+      {{/link-to}}
     </div>
   </div>
 </div>
@@ -32,3 +34,8 @@
 
 {{mdl-button action=(toggle "showSignUpModal" this)isRaised=true text='Sign up' isAccent=true}}
 {{/login-form}}
+
+{{#modal-dialog onClose=(action (mut isShowingBasic) false)}}
+  <h1>Access Code</h1>
+  <p>The caregiver will be given a code for their child. It might be a good idea to have a code per child and include the abality to add multiple codes. A child could have caregivers in multiple households, e.g. step parents.</p>
+{{/modal-dialog}}
