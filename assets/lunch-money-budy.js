@@ -48,6 +48,19 @@ define('lunch-money-budy/blueprints/ember-material-lite', ['exports', 'ember-mat
     }
   });
 });
+define("lunch-money-budy/components/-lf-get-outlet-state", ["exports", "liquid-fire/components/-lf-get-outlet-state"], function (exports, _lfGetOutletState) {
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function () {
+      return _lfGetOutletState.default;
+    }
+  });
+});
 define('lunch-money-budy/components/basic-dropdown', ['exports', 'ember-basic-dropdown/components/basic-dropdown'], function (exports, _basicDropdown) {
   'use strict';
 
@@ -224,6 +237,19 @@ define('lunch-money-budy/components/flash-message', ['exports', 'ember'], functi
         flashMessage: service()
     });
 });
+define("lunch-money-budy/components/illiquid-model", ["exports", "liquid-fire/components/illiquid-model"], function (exports, _illiquidModel) {
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function () {
+      return _illiquidModel.default;
+    }
+  });
+});
 define('lunch-money-budy/components/labeled-radio-button', ['exports', 'ember-radio-button/components/labeled-radio-button'], function (exports, _labeledRadioButton) {
   'use strict';
 
@@ -234,6 +260,142 @@ define('lunch-money-budy/components/labeled-radio-button', ['exports', 'ember-ra
     enumerable: true,
     get: function () {
       return _labeledRadioButton.default;
+    }
+  });
+});
+define("lunch-money-budy/components/liquid-bind", ["exports", "liquid-fire/components/liquid-bind"], function (exports, _liquidBind) {
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function () {
+      return _liquidBind.default;
+    }
+  });
+});
+define("lunch-money-budy/components/liquid-child", ["exports", "liquid-fire/components/liquid-child"], function (exports, _liquidChild) {
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function () {
+      return _liquidChild.default;
+    }
+  });
+});
+define("lunch-money-budy/components/liquid-container", ["exports", "liquid-fire/components/liquid-container"], function (exports, _liquidContainer) {
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function () {
+      return _liquidContainer.default;
+    }
+  });
+});
+define("lunch-money-budy/components/liquid-if", ["exports", "liquid-fire/components/liquid-if"], function (exports, _liquidIf) {
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function () {
+      return _liquidIf.default;
+    }
+  });
+});
+define("lunch-money-budy/components/liquid-measured", ["exports", "liquid-fire/components/liquid-measured"], function (exports, _liquidMeasured) {
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function () {
+      return _liquidMeasured.default;
+    }
+  });
+  Object.defineProperty(exports, "measure", {
+    enumerable: true,
+    get: function () {
+      return _liquidMeasured.measure;
+    }
+  });
+});
+define("lunch-money-budy/components/liquid-outlet", ["exports", "liquid-fire/components/liquid-outlet"], function (exports, _liquidOutlet) {
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function () {
+      return _liquidOutlet.default;
+    }
+  });
+});
+define("lunch-money-budy/components/liquid-spacer", ["exports", "liquid-fire/components/liquid-spacer"], function (exports, _liquidSpacer) {
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function () {
+      return _liquidSpacer.default;
+    }
+  });
+});
+define('lunch-money-budy/components/liquid-sync', ['exports', 'liquid-fire/components/liquid-sync'], function (exports, _liquidSync) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _liquidSync.default;
+    }
+  });
+});
+define("lunch-money-budy/components/liquid-unless", ["exports", "liquid-fire/components/liquid-unless"], function (exports, _liquidUnless) {
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function () {
+      return _liquidUnless.default;
+    }
+  });
+});
+define("lunch-money-budy/components/liquid-versions", ["exports", "liquid-fire/components/liquid-versions"], function (exports, _liquidVersions) {
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function () {
+      return _liquidVersions.default;
     }
   });
 });
@@ -1893,6 +2055,44 @@ define('lunch-money-budy/helpers/join', ['exports', 'ember-composable-helpers/he
     }
   });
 });
+define('lunch-money-budy/helpers/lf-lock-model', ['exports', 'liquid-fire/helpers/lf-lock-model'], function (exports, _lfLockModel) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _lfLockModel.default;
+    }
+  });
+  Object.defineProperty(exports, 'lfLockModel', {
+    enumerable: true,
+    get: function () {
+      return _lfLockModel.lfLockModel;
+    }
+  });
+});
+define('lunch-money-budy/helpers/lf-or', ['exports', 'liquid-fire/helpers/lf-or'], function (exports, _lfOr) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _lfOr.default;
+    }
+  });
+  Object.defineProperty(exports, 'lfOr', {
+    enumerable: true,
+    get: function () {
+      return _lfOr.lfOr;
+    }
+  });
+});
 define('lunch-money-budy/helpers/log-e', ['exports', 'ember-math-helpers/helpers/log-e'], function (exports, _logE) {
   'use strict';
 
@@ -2962,6 +3162,21 @@ define('lunch-money-budy/initializers/injectStore', ['exports'], function (expor
     initialize: function initialize() {}
   };
 });
+define("lunch-money-budy/initializers/liquid-fire", ["exports", "liquid-fire/ember-internals"], function (exports, _emberInternals) {
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+
+  (0, _emberInternals.initialize)();
+
+  exports.default = {
+    name: 'liquid-fire',
+    initialize: function initialize() {}
+  };
+});
 define('lunch-money-budy/initializers/material-lite-extensions', ['exports', 'ember-material-lite/initializers/material-lite-extensions'], function (exports, _materialLiteExtensions) {
   'use strict';
 
@@ -3647,6 +3862,14 @@ define('lunch-money-budy/services/globals', ['exports', 'ember'], function (expo
         }
     });
 });
+define("lunch-money-budy/services/liquid-fire-transitions", ["exports", "liquid-fire/transition-map"], function (exports, _transitionMap) {
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = _transitionMap.default;
+});
 define('lunch-money-budy/services/modal-dialog', ['exports', 'ember', 'lunch-money-budy/config/environment'], function (exports, _ember, _environment) {
   'use strict';
 
@@ -3763,7 +3986,7 @@ define("lunch-money-budy/templates/kid", ["exports"], function (exports) {
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.default = Ember.HTMLBars.template({ "id": "2hEG4/Pr", "block": "{\"statements\":[[11,\"div\",[]],[15,\"class\",\"row header\"],[13],[0,\"\\n  \"],[11,\"div\",[]],[15,\"class\",\"golden-small\"],[13],[0,\"\\n    \"],[6,[\"link-to\"],[\"kid\"],null,{\"statements\":[[1,[33,[\"mdl-icon\"],null,[[\"icon\",\"class\"],[\"face\",\"profile\"]]],false]],\"locals\":[]},null],[0,\"\\n  \"],[14],[0,\"\\n  \"],[11,\"div\",[]],[15,\"class\",\"golden-large\"],[13],[0,\"\\n    \"],[11,\"h3\",[]],[13],[1,[33,[\"if\"],[[28,[\"model\",\"kid\",\"name\"]],[28,[\"model\",\"kid\",\"name\"]]],null],false],[14],[0,\"\\n    \"],[1,[28,[\"model\",\"kid\",\"school\"]],false],[0,\"\\n  \"],[14],[0,\"\\n\"],[14],[0,\"\\n\"],[1,[26,[\"flash-message\"]],false],[0,\"\\n\"],[1,[26,[\"outlet\"]],false],[0,\"\\n\"]],\"locals\":[],\"named\":[],\"yields\":[],\"hasPartials\":false}", "meta": { "moduleName": "lunch-money-budy/templates/kid.hbs" } });
+  exports.default = Ember.HTMLBars.template({ "id": "1eJqIB1p", "block": "{\"statements\":[[11,\"div\",[]],[15,\"class\",\"row header\"],[13],[0,\"\\n  \"],[11,\"div\",[]],[15,\"class\",\"golden-small\"],[13],[0,\"\\n    \"],[6,[\"link-to\"],[\"kid\"],null,{\"statements\":[[1,[33,[\"mdl-icon\"],null,[[\"icon\",\"class\"],[\"face\",\"profile\"]]],false]],\"locals\":[]},null],[0,\"\\n  \"],[14],[0,\"\\n  \"],[11,\"div\",[]],[15,\"class\",\"golden-large\"],[13],[0,\"\\n    \"],[11,\"h3\",[]],[13],[1,[33,[\"if\"],[[28,[\"model\",\"kid\",\"name\"]],[28,[\"model\",\"kid\",\"name\"]]],null],false],[14],[0,\"\\n    \"],[1,[28,[\"model\",\"kid\",\"school\"]],false],[0,\"\\n  \"],[14],[0,\"\\n\"],[14],[0,\"\\n\"],[1,[26,[\"flash-message\"]],false],[0,\"\\n\"],[1,[26,[\"liquid-outlet\"]],false],[0,\"\\n\"]],\"locals\":[],\"named\":[],\"yields\":[],\"hasPartials\":false}", "meta": { "moduleName": "lunch-money-budy/templates/kid.hbs" } });
 });
 define("lunch-money-budy/templates/kid/index", ["exports"], function (exports) {
   "use strict";
@@ -3771,7 +3994,7 @@ define("lunch-money-budy/templates/kid/index", ["exports"], function (exports) {
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.default = Ember.HTMLBars.template({ "id": "nTGIJroH", "block": "{\"statements\":[[6,[\"if\"],[[33,[\"and\"],[[28,[\"model\",\"kid\",\"showBalanceModal\"]],[28,[\"model\",\"kid\",\"ignoreBalance\"]]],null]],null,{\"statements\":[[11,\"style\",[]],[13],[0,\".mdl-layout__header { display: none;} .mdl-mini-footer { display: none;} .is-casting-shadow { display: none !important;}\"],[14],[0,\"\\n\"],[11,\"div\",[]],[15,\"class\",\"modal showing\"],[13],[0,\"\\n  \"],[11,\"div\",[]],[15,\"class\",\"modal-content\"],[13],[0,\"\\n    \"],[1,[33,[\"mdl-icon\"],null,[[\"icon\",\"class\"],[\"face\",\"profile\"]]],false],[0,\"\\n    \"],[11,\"h5\",[]],[13],[1,[28,[\"model\",\"kid\",\"name\"]],false],[0,\"'s balance is below $20\"],[14],[0,\"\\n    \"],[1,[33,[\"input\"],null,[[\"type\",\"value\",\"class\"],[\"number\",[28,[\"model\",\"kid\",\"balance\"]],[28,[\"model\",\"kid\",\"balanceClass\"]]]]],false],[0,\"\\n\"],[0,\"    \"],[1,[33,[\"select-method\"],null,[[\"model\"],[[28,[\"model\"]]]]],false],[0,\"\\n\"],[11,\"br\",[]],[13],[14],[0,\"\\n        Auto Pay \"],[1,[33,[\"input\"],null,[[\"type\",\"checked\",\"enter\"],[\"checkbox\",[28,[\"model\",\"kid\",\"autopay\"]],[33,[\"toggle\"],[[28,[\"model\",\"kid\",\"autopay\"]]],null]]]],false],[0,\"\\n\\n        \"],[11,\"br\",[]],[13],[14],[0,\"\\n      \"],[11,\"br\",[]],[13],[14],[0,\"\\n        \"],[1,[33,[\"mdl-button\"],null,[[\"isRaised\",\"text\",\"isAccent\",\"action\"],[true,\"Confirm\",true,[33,[\"route-action\"],[\"saveDirty\",[28,[\"model\",\"kid\"]]],null]]]],false],[0,\"\\n\"],[0,\"        \"],[1,[33,[\"mdl-button\"],null,[[\"class\",\"text\",\"isAccent\",\"action\"],[\"flat\",\"Not Now\",true,[33,[\"toggle\"],[\"ignoreBalance\",[28,[\"model\",\"kid\"]]],null]]]],false],[0,\"\\n  \"],[14],[0,\"\\n\"],[14],[0,\"\\n\"]],\"locals\":[]},{\"statements\":[[6,[\"if\"],[[28,[\"model\",\"kid\",\"showBalanceModal\"]]],null,{\"statements\":[[1,[33,[\"mdl-button\"],null,[[\"class\",\"text\",\"isAccent\",\"action\"],[\"flat\",\"LOW FUNDS!\",true,[33,[\"toggle\"],[\"ignoreBalance\",[28,[\"model\",\"kid\"]]],null]]]],false],[0,\"\\n\"]],\"locals\":[]},null],[6,[\"link-to\"],[\"kid.lunches\"],null,{\"statements\":[[11,\"div\",[]],[15,\"class\",\"row\"],[13],[0,\"\\n  \"],[11,\"div\",[]],[15,\"class\",\"one-fifth\"],[13],[0,\"\\n    \"],[1,[33,[\"mdl-icon\"],null,[[\"icon\"],[\"local_dining\"]]],false],[0,\"\\n  \"],[14],[0,\"\\n  \"],[11,\"div\",[]],[15,\"class\",\"three-fifths\"],[13],[0,\"\\n    Lunches\\n  \"],[14],[0,\"\\n  \"],[11,\"div\",[]],[15,\"class\",\"one-fifth action\"],[13],[0,\"\\n    \"],[11,\"i\",[]],[15,\"class\",\"material-icons\"],[13],[0,\"keyboard_arrow_right\"],[14],[0,\"\\n  \"],[14],[0,\"\\n\"],[14],[0,\"\\n\"]],\"locals\":[]},null],[0,\"\\n\"],[6,[\"link-to\"],[\"kid.methods\",[28,[\"model\",\"kid\",\"id\"]]],null,{\"statements\":[[11,\"div\",[]],[15,\"class\",\"row\"],[13],[0,\"\\n  \"],[11,\"div\",[]],[15,\"class\",\"one-fifth\"],[13],[0,\"\\n    \"],[1,[33,[\"mdl-icon\"],null,[[\"icon\"],[\"local_atm\"]]],false],[0,\"\\n  \"],[14],[0,\"\\n  \"],[11,\"div\",[]],[15,\"class\",\"three-fifths\"],[13],[0,\"\\n    Payment Methods\\n  \"],[14],[0,\"\\n  \"],[11,\"div\",[]],[15,\"class\",\"one-fifth action\"],[13],[0,\"\\n    \"],[11,\"i\",[]],[15,\"class\",\"material-icons\"],[13],[0,\"keyboard_arrow_right\"],[14],[0,\"\\n  \"],[14],[0,\"\\n\"],[14],[0,\"\\n\"]],\"locals\":[]},null],[0,\"\\n\"],[6,[\"link-to\"],[\"kid.settings\",[28,[\"model\",\"kid\",\"id\"]]],null,{\"statements\":[[11,\"div\",[]],[15,\"class\",\"row\"],[13],[0,\"\\n  \"],[11,\"div\",[]],[15,\"class\",\"one-fifth\"],[13],[0,\"\\n    \"],[1,[33,[\"mdl-icon\"],null,[[\"icon\"],[\"settings\"]]],false],[0,\"\\n  \"],[14],[0,\"\\n  \"],[11,\"div\",[]],[15,\"class\",\"three-fifths\"],[13],[0,\"\\n    Settings\\n  \"],[14],[0,\"\\n  \"],[11,\"div\",[]],[15,\"class\",\"one-fifth action\"],[13],[0,\"\\n    \"],[11,\"i\",[]],[15,\"class\",\"material-icons\"],[13],[0,\"keyboard_arrow_right\"],[14],[0,\"\\n  \"],[14],[0,\"\\n\"],[14],[0,\"\\n\"]],\"locals\":[]},null]],\"locals\":[]}],[0,\"\\n\"],[6,[\"if\"],[[28,[\"model\",\"kid\",\"showBalanceModal\"]]],null,{\"statements\":[[6,[\"modal-dialog\"],null,[[\"onClose\"],[[33,[\"action\"],[[28,[null]],[33,[\"mut\"],[[28,[\"isShowingBasic\"]]],null],false],null]]],{\"statements\":[[0,\"  \"],[11,\"h3\",[]],[13],[0,\"Quick Access to Low Balance\"],[14],[0,\"\\n  \"],[11,\"p\",[]],[13],[0,\"If a child's account is not set to auto reload and has a balance is below $20, the caretaker is taken directly to a screen where they can add funds.\"],[14],[0,\"\\n  \"],[11,\"p\",[]],[13],[0,\"\\n    The balance will turn \"],[11,\"span\",[]],[15,\"style\",\"color:green\"],[13],[0,\"green\"],[14],[0,\" once it is over $20.\\n  \"],[14],[0,\"\\n  \"],[11,\"p\",[]],[13],[0,\"\\n    A \"],[1,[33,[\"mdl-button\"],null,[[\"class\",\"text\",\"isAccent\"],[\"flat\",\"LOW FUNDS!\",true]]],false],[0,\" button will show if funds still need to be added. Too bad the blink tag is gone \"],[11,\"i\",[]],[15,\"class\",\"material-icons\"],[13],[0,\"mood\"],[14],[0,\"\\n  \"],[14],[0,\"\\n\"]],\"locals\":[]},null]],\"locals\":[]},null]],\"locals\":[],\"named\":[],\"yields\":[],\"hasPartials\":false}", "meta": { "moduleName": "lunch-money-budy/templates/kid/index.hbs" } });
+  exports.default = Ember.HTMLBars.template({ "id": "G4lcIpKc", "block": "{\"statements\":[[6,[\"if\"],[[33,[\"and\"],[[28,[\"model\",\"kid\",\"showBalanceModal\"]],[28,[\"model\",\"kid\",\"ignoreBalance\"]]],null]],null,{\"statements\":[[11,\"style\",[]],[13],[0,\".mdl-layout__header { display: none;} .mdl-mini-footer { display: none;} .is-casting-shadow { display: none !important;} .header { display: none;}\"],[14],[0,\"\\n\"],[11,\"div\",[]],[15,\"class\",\"modal showing\"],[13],[0,\"\\n  \"],[11,\"div\",[]],[15,\"class\",\"modal-content\"],[13],[0,\"\\n    \"],[1,[33,[\"mdl-icon\"],null,[[\"icon\",\"class\"],[\"face\",\"profile\"]]],false],[0,\"\\n    \"],[11,\"h5\",[]],[13],[1,[28,[\"model\",\"kid\",\"name\"]],false],[0,\"'s balance is below $20\"],[14],[0,\"\\n    \"],[1,[33,[\"input\"],null,[[\"type\",\"value\",\"class\"],[\"number\",[28,[\"model\",\"kid\",\"balance\"]],[28,[\"model\",\"kid\",\"balanceClass\"]]]]],false],[0,\"\\n\"],[0,\"    \"],[1,[33,[\"select-method\"],null,[[\"model\"],[[28,[\"model\"]]]]],false],[0,\"\\n\"],[11,\"br\",[]],[13],[14],[0,\"\\n        Auto Pay \"],[1,[33,[\"input\"],null,[[\"type\",\"checked\",\"enter\"],[\"checkbox\",[28,[\"model\",\"kid\",\"autopay\"]],[33,[\"toggle\"],[[28,[\"model\",\"kid\",\"autopay\"]]],null]]]],false],[0,\"\\n\\n        \"],[11,\"br\",[]],[13],[14],[0,\"\\n      \"],[11,\"br\",[]],[13],[14],[0,\"\\n        \"],[1,[33,[\"mdl-button\"],null,[[\"isRaised\",\"text\",\"isAccent\",\"action\"],[true,\"Confirm\",true,[33,[\"route-action\"],[\"saveDirty\",[28,[\"model\",\"kid\"]]],null]]]],false],[0,\"\\n\"],[0,\"        \"],[1,[33,[\"mdl-button\"],null,[[\"class\",\"text\",\"isAccent\",\"action\"],[\"flat\",\"Not Now\",true,[33,[\"toggle\"],[\"ignoreBalance\",[28,[\"model\",\"kid\"]]],null]]]],false],[0,\"\\n  \"],[14],[0,\"\\n\"],[14],[0,\"\\n\"]],\"locals\":[]},{\"statements\":[[6,[\"if\"],[[28,[\"model\",\"kid\",\"showBalanceModal\"]]],null,{\"statements\":[[1,[33,[\"mdl-button\"],null,[[\"class\",\"text\",\"isAccent\",\"action\"],[\"flat\",\"LOW FUNDS!\",true,[33,[\"toggle\"],[\"ignoreBalance\",[28,[\"model\",\"kid\"]]],null]]]],false],[0,\"\\n\"]],\"locals\":[]},null],[6,[\"link-to\"],[\"kid.lunches\"],null,{\"statements\":[[11,\"div\",[]],[15,\"class\",\"row\"],[13],[0,\"\\n  \"],[11,\"div\",[]],[15,\"class\",\"one-fifth\"],[13],[0,\"\\n    \"],[1,[33,[\"mdl-icon\"],null,[[\"icon\"],[\"local_dining\"]]],false],[0,\"\\n  \"],[14],[0,\"\\n  \"],[11,\"div\",[]],[15,\"class\",\"three-fifths\"],[13],[0,\"\\n    Lunches\\n  \"],[14],[0,\"\\n  \"],[11,\"div\",[]],[15,\"class\",\"one-fifth action\"],[13],[0,\"\\n    \"],[11,\"i\",[]],[15,\"class\",\"material-icons\"],[13],[0,\"keyboard_arrow_right\"],[14],[0,\"\\n  \"],[14],[0,\"\\n\"],[14],[0,\"\\n\"]],\"locals\":[]},null],[0,\"\\n\"],[6,[\"link-to\"],[\"kid.methods\",[28,[\"model\",\"kid\",\"id\"]]],null,{\"statements\":[[11,\"div\",[]],[15,\"class\",\"row\"],[13],[0,\"\\n  \"],[11,\"div\",[]],[15,\"class\",\"one-fifth\"],[13],[0,\"\\n    \"],[1,[33,[\"mdl-icon\"],null,[[\"icon\"],[\"local_atm\"]]],false],[0,\"\\n  \"],[14],[0,\"\\n  \"],[11,\"div\",[]],[15,\"class\",\"three-fifths\"],[13],[0,\"\\n    Payment Methods\\n  \"],[14],[0,\"\\n  \"],[11,\"div\",[]],[15,\"class\",\"one-fifth action\"],[13],[0,\"\\n    \"],[11,\"i\",[]],[15,\"class\",\"material-icons\"],[13],[0,\"keyboard_arrow_right\"],[14],[0,\"\\n  \"],[14],[0,\"\\n\"],[14],[0,\"\\n\"]],\"locals\":[]},null],[0,\"\\n\"],[6,[\"link-to\"],[\"kid.settings\",[28,[\"model\",\"kid\",\"id\"]]],null,{\"statements\":[[11,\"div\",[]],[15,\"class\",\"row\"],[13],[0,\"\\n  \"],[11,\"div\",[]],[15,\"class\",\"one-fifth\"],[13],[0,\"\\n    \"],[1,[33,[\"mdl-icon\"],null,[[\"icon\"],[\"settings\"]]],false],[0,\"\\n  \"],[14],[0,\"\\n  \"],[11,\"div\",[]],[15,\"class\",\"three-fifths\"],[13],[0,\"\\n    Settings\\n  \"],[14],[0,\"\\n  \"],[11,\"div\",[]],[15,\"class\",\"one-fifth action\"],[13],[0,\"\\n    \"],[11,\"i\",[]],[15,\"class\",\"material-icons\"],[13],[0,\"keyboard_arrow_right\"],[14],[0,\"\\n  \"],[14],[0,\"\\n\"],[14],[0,\"\\n\"]],\"locals\":[]},null]],\"locals\":[]}],[0,\"\\n\"],[6,[\"if\"],[[28,[\"model\",\"kid\",\"showBalanceModal\"]]],null,{\"statements\":[[6,[\"modal-dialog\"],null,[[\"onClose\"],[[33,[\"action\"],[[28,[null]],[33,[\"mut\"],[[28,[\"isShowingBasic\"]]],null],false],null]]],{\"statements\":[[0,\"  \"],[11,\"h3\",[]],[13],[0,\"Quick Access to Low Balance\"],[14],[0,\"\\n  \"],[11,\"p\",[]],[13],[0,\"If a child's account is not set to auto reload and has a balance is below $20, the caretaker is taken directly to a screen where they can add funds.\"],[14],[0,\"\\n  \"],[11,\"p\",[]],[13],[0,\"\\n    The balance will turn \"],[11,\"span\",[]],[15,\"style\",\"color:green\"],[13],[0,\"green\"],[14],[0,\" once it is over $20.\\n  \"],[14],[0,\"\\n  \"],[11,\"p\",[]],[13],[0,\"\\n    A \"],[1,[33,[\"mdl-button\"],null,[[\"class\",\"text\",\"isAccent\"],[\"flat\",\"LOW FUNDS!\",true]]],false],[0,\" button will show if funds still need to be added. Too bad the blink tag is gone \"],[11,\"i\",[]],[15,\"class\",\"material-icons\"],[13],[0,\"mood\"],[14],[0,\"\\n  \"],[14],[0,\"\\n\"]],\"locals\":[]},null]],\"locals\":[]},null]],\"locals\":[],\"named\":[],\"yields\":[],\"hasPartials\":false}", "meta": { "moduleName": "lunch-money-budy/templates/kid/index.hbs" } });
 });
 define("lunch-money-budy/templates/kid/lunches", ["exports"], function (exports) {
   "use strict";
@@ -3869,6 +4092,202 @@ define("lunch-money-budy/templates/sign-up", ["exports"], function (exports) {
   });
   exports.default = Ember.HTMLBars.template({ "id": "qaYRjC6Y", "block": "{\"statements\":[[11,\"style\",[]],[13],[0,\".mdl-layout__header, .mdl-mini-footer { display: none;}\"],[14],[0,\"\\n\"],[11,\"div\",[]],[16,\"class\",[34,[\"modal \",[33,[\"if\"],[[28,[\"showSignUpModal\"]],\"showing\"],null]]]],[13],[0,\"\\n  \"],[11,\"div\",[]],[15,\"class\",\"modal-content\"],[13],[0,\"\\n    \"],[11,\"div\",[]],[15,\"class\",\"row\"],[13],[0,\"\\n      \"],[1,[33,[\"mdl-icon\"],null,[[\"icon\"],[\"check_circle\"]]],false],[0,\"\\n    \"],[14],[0,\"\\n      \"],[11,\"h3\",[]],[13],[0,\"Account Confirmed\"],[14],[0,\"\\n    \"],[11,\"div\",[]],[15,\"class\",\"row\"],[13],[0,\"\\n\"],[6,[\"link-to\"],[\"kids\"],null,{\"statements\":[[0,\"      \"],[1,[33,[\"mdl-button\"],null,[[\"isRaised\",\"text\",\"isAccent\"],[true,\"Login\",true]]],false],[0,\"\\n\"]],\"locals\":[]},null],[0,\"    \"],[14],[0,\"\\n  \"],[14],[0,\"\\n\"],[14],[0,\"\\n\\n\\n\"],[11,\"h5\",[]],[13],[0,\"Welcome To\"],[14],[0,\"\\n\"],[6,[\"login-form\"],null,null,{\"statements\":[[11,\"div\",[]],[15,\"class\",\"row content-table\"],[13],[0,\"\\n  \"],[11,\"div\",[]],[15,\"class\",\"whole\"],[13],[0,\"\\n    \"],[1,[33,[\"mdl-textfield\"],null,[[\"label\",\"value\",\"disabled\"],[\"Password\",\"jorge@hawalius.com\",\"disabled\"]]],false],[0,\"\\n  \"],[14],[0,\"\\n  \"],[11,\"div\",[]],[15,\"class\",\"whole\"],[13],[0,\"\\n    \"],[1,[33,[\"mdl-textfield\"],null,[[\"label\",\"value\",\"disabled\"],[\"Password\",\"************\",\"disabled\"]]],false],[0,\"\\n  \"],[14],[0,\"\\n  \"],[11,\"div\",[]],[15,\"class\",\"four-fifths\"],[13],[0,\"\\n    \"],[1,[33,[\"mdl-textfield\"],null,[[\"label\",\"value\",\"disabled\"],[\"Access Code\",\"12345678\",\"disabled\"]]],false],[0,\"\\n  \"],[14],[0,\"\\n  \"],[11,\"div\",[]],[15,\"class\",\"one-fifth\"],[13],[0,\"\\n    \"],[1,[33,[\"mdl-icon\"],null,[[\"icon\",\"id\",\"class\"],[\"help_outline\",\"mike\",\"help\"]]],false],[0,\"\\n    \"],[6,[\"mdl-tooltip\"],null,[[\"for\"],[\"mike\"]],{\"statements\":[[0,\"See original letter for your family’s access code. Contact Stankonia Public Schools 404-355-2121\"]],\"locals\":[]},null],[0,\"\\n  \"],[14],[0,\"\\n\"],[14],[0,\"\\n\\n\"],[1,[33,[\"mdl-button\"],null,[[\"action\",\"isRaised\",\"text\",\"isAccent\"],[[33,[\"toggle\"],[\"showSignUpModal\",[28,[null]]],null],true,\"Sign up\",true]]],false],[0,\"\\n\"]],\"locals\":[]},null],[0,\"\\n\"],[6,[\"modal-dialog\"],null,[[\"onClose\"],[[33,[\"action\"],[[28,[null]],[33,[\"mut\"],[[28,[\"isShowingBasic\"]]],null],false],null]]],{\"statements\":[[0,\"  \"],[11,\"h1\",[]],[13],[0,\"Access Code\"],[14],[0,\"\\n  \"],[11,\"p\",[]],[13],[0,\"The caregiver will be given a code for their child. It might be a good idea to have a code per child and include the abality to add multiple codes. A child could have caregivers in multiple households, e.g. step parents.\"],[14],[0,\"\\n\"]],\"locals\":[]},null]],\"locals\":[],\"named\":[],\"yields\":[],\"hasPartials\":false}", "meta": { "moduleName": "lunch-money-budy/templates/sign-up.hbs" } });
 });
+define('lunch-money-budy/transitions', ['exports'], function (exports) {
+    'use strict';
+
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+
+    exports.default = function () {
+
+        this.transition(this.fromRoute('kid.index'), this.toRoute('kid.methods'), this.use('toLeft'), this.reverse('toRight'));
+        this.transition(this.fromRoute('kid.index'), this.toRoute('kid.lunches'), this.use('toLeft'), this.reverse('toRight'));
+        this.transition(this.fromRoute('kid.index'), this.toRoute('kid.settings'), this.use('toLeft'), this.reverse('toRight'));
+    };
+});
+define('lunch-money-budy/transitions/cross-fade', ['exports', 'liquid-fire/transitions/cross-fade'], function (exports, _crossFade) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _crossFade.default;
+    }
+  });
+});
+define('lunch-money-budy/transitions/default', ['exports', 'liquid-fire/transitions/default'], function (exports, _default) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _default.default;
+    }
+  });
+});
+define('lunch-money-budy/transitions/explode', ['exports', 'liquid-fire/transitions/explode'], function (exports, _explode) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _explode.default;
+    }
+  });
+});
+define('lunch-money-budy/transitions/fade', ['exports', 'liquid-fire/transitions/fade'], function (exports, _fade) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _fade.default;
+    }
+  });
+});
+define('lunch-money-budy/transitions/flex-grow', ['exports', 'liquid-fire/transitions/flex-grow'], function (exports, _flexGrow) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _flexGrow.default;
+    }
+  });
+});
+define('lunch-money-budy/transitions/fly-to', ['exports', 'liquid-fire/transitions/fly-to'], function (exports, _flyTo) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _flyTo.default;
+    }
+  });
+});
+define('lunch-money-budy/transitions/move-over', ['exports', 'liquid-fire/transitions/move-over'], function (exports, _moveOver) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _moveOver.default;
+    }
+  });
+});
+define('lunch-money-budy/transitions/scale', ['exports', 'liquid-fire/transitions/scale'], function (exports, _scale) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _scale.default;
+    }
+  });
+});
+define('lunch-money-budy/transitions/scroll-then', ['exports', 'liquid-fire/transitions/scroll-then'], function (exports, _scrollThen) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _scrollThen.default;
+    }
+  });
+});
+define('lunch-money-budy/transitions/to-down', ['exports', 'liquid-fire/transitions/to-down'], function (exports, _toDown) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _toDown.default;
+    }
+  });
+});
+define('lunch-money-budy/transitions/to-left', ['exports', 'liquid-fire/transitions/to-left'], function (exports, _toLeft) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _toLeft.default;
+    }
+  });
+});
+define('lunch-money-budy/transitions/to-right', ['exports', 'liquid-fire/transitions/to-right'], function (exports, _toRight) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _toRight.default;
+    }
+  });
+});
+define('lunch-money-budy/transitions/to-up', ['exports', 'liquid-fire/transitions/to-up'], function (exports, _toUp) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _toUp.default;
+    }
+  });
+});
+define('lunch-money-budy/transitions/wait', ['exports', 'liquid-fire/transitions/wait'], function (exports, _wait) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _wait.default;
+    }
+  });
+});
 
 
 define('lunch-money-budy/config/environment', ['ember'], function(Ember) {
@@ -3891,6 +4310,6 @@ catch(err) {
 });
 
 if (!runningTests) {
-  require("lunch-money-budy/app")["default"].create({"LOG_TRANSITIONS":true,"API_HOST":"http://lmb.ecdsweb.org","name":"lunch-money-budy","version":"0.0.0+7ab8df85"});
+  require("lunch-money-budy/app")["default"].create({"LOG_TRANSITIONS":true,"API_HOST":"http://lmb.ecdsweb.org","name":"lunch-money-budy","version":"0.0.0+65ac57b8"});
 }
 //# sourceMappingURL=lunch-money-budy.map

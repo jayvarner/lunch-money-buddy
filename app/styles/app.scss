@@ -39,6 +39,9 @@ a {
 
     &.showing {
       visibility: visible;
+      visibility: visible;
+      position: inherit;
+      height: 569px;
     }
 
   }

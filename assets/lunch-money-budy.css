@@ -11329,7 +11329,10 @@ a {
     z-index: 9999999999999999999999;
     visibility: hidden; }
     .screen .modal.showing {
-      visibility: visible; }
+      visibility: visible;
+      visibility: visible;
+      position: inherit;
+      height: 569px; }
   .screen .modal-content {
     height: 90%;
     width: 90%;

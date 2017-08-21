@@ -204,6 +204,11 @@ define('lunch-money-budy/tests/app.lint-test', [], function () {
     assert.expect(1);
     assert.ok(true, 'services/globals.js should pass ESLint\n\n');
   });
+
+  QUnit.test('transitions.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'transitions.js should pass ESLint\n\n');
+  });
 });
 define('lunch-money-budy/tests/helpers/destroy-app', ['exports', 'ember'], function (exports, _ember) {
   'use strict';
