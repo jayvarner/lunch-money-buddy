@@ -11364,7 +11364,11 @@ a .row {
   margin-top: 1em; }
 
 h5 {
-  margin-top: 0; }
+  margin-top: .75em;
+  margin-left: .75em !important;
+  text-transform: uppercase;
+  color: grey;
+  text-align: left; }
 
 .row {
   color: #757575;
@@ -11380,7 +11384,8 @@ h5 {
   .row.content-table {
     padding: 0;
     font-size: .75em;
-    margin-bottom: .75em; }
+    margin-bottom: .75em;
+    margin-left: .75em; }
   .row.headers div {
     font-size: .75em; }
   .row div {
@@ -11397,7 +11402,7 @@ h5 {
 footer {
   z-index: 999; }
   footer.row {
-    height: 3em;
+    height: 2em;
     padding: 0 !important; }
   footer .half {
     color: white;
@@ -11425,9 +11430,9 @@ footer {
   position: absolute;
   left: 0;
   bottom: 0;
-  height: 3em;
   width: 100%;
-  padding: 1em 0 !important; }
+  padding: 1em 0 !important;
+  text-align: center; }
   footer a {
     color: #EEEEEE; }
 
@@ -11459,8 +11464,10 @@ footer {
   font-size: 2em;
   width: 35%; }
 
-.mdl-mini-footer--link-list a {
-  z-index: 99999999; }
+.mdl-mini-footer--link-list {
+  padding: 0 96px; }
+  .mdl-mini-footer--link-list a {
+    z-index: 99999999; }
 
 .feedback {
   color: white;
@@ -11527,7 +11534,10 @@ td {
 
 .ember-modal-wrapper {
   position: absolute;
-  left: 500px; }
+  left: 500px;
+  width: 300px;
+  padding-left: 1em;
+  border-left: solid #F44336; }
 
 .mdl-switch {
   margin-left: 15px; }
@@ -11535,3 +11545,57 @@ td {
 .golden-small,
 .golden-large {
   color: #616161; }
+
+.mdl-tabs__tab-bar {
+  border: 0; }
+
+h5.month {
+  padding: auto 0;
+  text-align: center;
+  margin-bottom: 0;
+  font-size: 1em; }
+
+.mdl-layout__header .mdl-layout__drawer-button {
+  display: none !important; }
+
+.backbutton {
+  position: absolute;
+  z-index: 99;
+  top: 20px;
+  left: 1em;
+  cursor: pointer;
+  color: white;
+  font-size: 1.5em;
+  font-weight: bolder; }
+
+#sub-help,
+#partner,
+#secondcode {
+  font-size: 18px;
+  float: none;
+  padding: 0; }
+
+.profile-screen div {
+  margin-bottom: .5em; }
+
+.profile-screen .profile-head {
+  font-size: 1em !important; }
+
+.profile-screen .whole {
+  text-transform: uppercase; }
+  .profile-screen .whole.sub {
+    text-transform: none; }
+
+.profile-screen .two-thirds,
+.profile-screen .code {
+  color: #616161 !important;
+  text-align: left !important;
+  font-size: .75em; }
+
+.profile-screen .one-third {
+  text-align: right;
+  color: black; }
+
+.profile-screen input[type=checkbox] {
+  font-weight: bolder;
+  color: black; }

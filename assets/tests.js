@@ -35,6 +35,11 @@ define('lunch-money-budy/tests/app.lint-test', [], function () {
     assert.ok(true, 'components/method-form.js should pass ESLint\n\n');
   });
 
+  QUnit.test('components/select-method.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'components/select-method.js should pass ESLint\n\n');
+  });
+
   QUnit.test('controllers/application.js', function (assert) {
     assert.expect(1);
     assert.ok(true, 'controllers/application.js should pass ESLint\n\n');
@@ -168,6 +173,11 @@ define('lunch-money-budy/tests/app.lint-test', [], function () {
   QUnit.test('routes/kids.js', function (assert) {
     assert.expect(1);
     assert.ok(true, 'routes/kids.js should pass ESLint\n\n');
+  });
+
+  QUnit.test('routes/profile.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'routes/profile.js should pass ESLint\n\n');
   });
 
   QUnit.test('routes/pwreset.js', function (assert) {
@@ -493,6 +503,36 @@ define('lunch-money-budy/tests/integration/components/method-form-test', ['ember
     assert.equal(this.$().text().trim(), 'template block text');
   });
 });
+define('lunch-money-budy/tests/integration/components/select-method-test', ['ember-qunit'], function (_emberQunit) {
+  'use strict';
+
+  (0, _emberQunit.moduleForComponent)('select-method', 'Integration | Component | select method', {
+    integration: true
+  });
+
+  (0, _emberQunit.test)('it renders', function (assert) {
+
+    // Set any properties with this.set('myProperty', 'value');
+    // Handle any actions with this.on('myAction', function(val) { ... });
+
+    this.render(Ember.HTMLBars.template({
+      "id": "ANXwD9uS",
+      "block": "{\"statements\":[[1,[26,[\"select-method\"]],false]],\"locals\":[],\"named\":[],\"yields\":[],\"hasPartials\":false}",
+      "meta": {}
+    }));
+
+    assert.equal(this.$().text().trim(), '');
+
+    // Template block usage:
+    this.render(Ember.HTMLBars.template({
+      "id": "5htIeStV",
+      "block": "{\"statements\":[[0,\"\\n\"],[6,[\"select-method\"],null,null,{\"statements\":[[0,\"      template block text\\n\"]],\"locals\":[]},null],[0,\"  \"]],\"locals\":[],\"named\":[],\"yields\":[],\"hasPartials\":false}",
+      "meta": {}
+    }));
+
+    assert.equal(this.$().text().trim(), 'template block text');
+  });
+});
 define('lunch-money-budy/tests/test-helper', ['lunch-money-budy/tests/helpers/resolver', 'ember-qunit', 'ember-cli-qunit'], function (_resolver, _emberQunit, _emberCliQunit) {
   'use strict';
 
@@ -542,6 +582,11 @@ define('lunch-money-budy/tests/tests.lint-test', [], function () {
   QUnit.test('integration/components/method-form-test.js', function (assert) {
     assert.expect(1);
     assert.ok(true, 'integration/components/method-form-test.js should pass ESLint\n\n');
+  });
+
+  QUnit.test('integration/components/select-method-test.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'integration/components/select-method-test.js should pass ESLint\n\n');
   });
 
   QUnit.test('test-helper.js', function (assert) {
@@ -682,6 +727,11 @@ define('lunch-money-budy/tests/tests.lint-test', [], function () {
   QUnit.test('unit/routes/kids/methods-test.js', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/routes/kids/methods-test.js should pass ESLint\n\n');
+  });
+
+  QUnit.test('unit/routes/profile-test.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/routes/profile-test.js should pass ESLint\n\n');
   });
 
   QUnit.test('unit/routes/pwreset-test.js', function (assert) {
@@ -1060,6 +1110,19 @@ define('lunch-money-budy/tests/unit/routes/kids/methods-test', ['ember-qunit'], 
   'use strict';
 
   (0, _emberQunit.moduleFor)('route:kids/methods', 'Unit | Route | kids/methods', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var route = this.subject();
+    assert.ok(route);
+  });
+});
+define('lunch-money-budy/tests/unit/routes/profile-test', ['ember-qunit'], function (_emberQunit) {
+  'use strict';
+
+  (0, _emberQunit.moduleFor)('route:profile', 'Unit | Route | profile', {
     // Specify the other units that are required for this test.
     // needs: ['controller:foo']
   });
