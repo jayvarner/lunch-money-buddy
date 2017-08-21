@@ -4,8 +4,8 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'lunch-money-budy',
     environment: environment,
-    rootURL: '/',
-    locationType: 'auto',
+    rootURL: '/lunch-money-budy',
+    locationType: 'hash',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -42,8 +42,10 @@ module.exports = function(environment) {
     ENV.APP.rootElement = '#ember-testing';
   }
 
-  if (environment === 'production') {
-      //
+  if (environment === 'github') {
+      ENV.APP.API_HOST = 'http://lmb.ecdsweb.org';
+      ENV.rootURL = '/lunch-money-budy';
+      ENV.locationType = 'hash';
   }
 
   return ENV;
