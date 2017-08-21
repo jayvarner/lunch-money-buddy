@@ -1,21 +1,28 @@
-{{!-- {{#if (or (lt model.balance 20) model.hasDirtyAttributes)}} --}}
-{{#if model.showBalanceModal}}
-<style>.mdl-layout__header { display: none;}</style>
+{{#if (and model.kid.showBalanceModal model.kid.ignoreBalance)}}
+<style>.mdl-layout__header { display: none;} .mdl-mini-footer { display: none;} .is-casting-shadow { display: none !important;}</style>
 <div class='modal showing'>
   <div class='modal-content'>
     {{mdl-icon icon='face' class='profile'}}
-    <h5>Add funds for {{model.name}}</h5>
-    {{input type='number' value=model.balance class=model.balanceClass}}
-    {{!-- <input style='color:red' type='number' value={{model.kid.balance}} /> --}}
-    method
-    visa
-    <div class='row'>
-      {{mdl-button isRaised=true text='Confirm' isAccent=true action=(route-action 'saveDirty' model)}}
-    </div>
+    <h5>{{model.kid.name}}'s balance is below $20</h5>
+    {{input type='number' value=model.kid.balance class=model.kid.balanceClass}}
+    {{!-- <input style='color:red' type='number' value={{model.kid.kid.balance}} /> --}}
+    {{select-method model=model}}
+<br />
+        Auto Pay {{input type='checkbox' checked=model.kid.autopay action=(toggle model.kid.autopay)}}
+
+        <br />
+      <br />
+        {{mdl-button isRaised=true text='Confirm' isAccent=true action=(route-action 'saveDirty' model.kid)}}
+      {{!-- </div>
+      <div class='half'> --}}
+        {{mdl-button class='flat' text='Not Now' isAccent=true action=(toggle 'ignoreBalance' model.kid)}}
   </div>
 </div>
 {{else}}
-Add Funds {{input type='number' id='regular' value=model.balance class=model.balanceClass}}
+{{#if model.kid.showBalanceModal}}
+{{mdl-button class='flat' text='LOW FUNDS!' isAccent=true action=(toggle 'ignoreBalance' model.kid)}}
+{{/if}}
+{{!-- Add Funds {{input type='number' id='regular' value=model.kid.balance class=model.kid.balanceClass}} --}}
 {{#link-to 'kid.lunches'}}
 <div class='row'>
   <div class='one-fifth'>
@@ -30,7 +37,7 @@ Add Funds {{input type='number' id='regular' value=model.balance class=model.bal
 </div>
 {{/link-to}}
 
-{{#link-to 'kid.methods' model.id}}
+{{#link-to 'kid.methods' model.kid.id}}
 <div class='row'>
   <div class='one-fifth'>
     {{mdl-icon icon='local_atm'}}
@@ -44,7 +51,7 @@ Add Funds {{input type='number' id='regular' value=model.balance class=model.bal
 </div>
 {{/link-to}}
 
-{{#link-to 'kid.settings' model.id}}
+{{#link-to 'kid.settings' model.kid.id}}
 <div class='row'>
   <div class='one-fifth'>
     {{mdl-icon icon='settings'}}
@@ -57,4 +64,17 @@ Add Funds {{input type='number' id='regular' value=model.balance class=model.bal
   </div>
 </div>
 {{/link-to}}
+{{/if}}
+
+{{#if model.kid.showBalanceModal}}
+{{#modal-dialog onClose=(action (mut isShowingBasic) false)}}
+  <h3>Quick Access to Low Balance</h3>
+  <p>If a child's account is not set to auto reload and has a balance is below $20, the caretaker is taken directly to a screen where they can add funds.</p>
+  <p>
+    The balance will turn <span style='color:green'>green</span> once it is over $20.
+  </p>
+  <p>
+    A {{mdl-button class='flat' text='LOW FUNDS!' isAccent=true }} button will show if funds still need to be added. Too bad the blink tag is gone <i class="material-icons">mood</i>
+  </p>
+{{/modal-dialog}}
 {{/if}}

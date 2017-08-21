@@ -4,9 +4,9 @@ const { Route, get, inject: { service } } = Ember;
 
 export default Route.extend({
     flashMessage: service(),
-    model() {
-        return this.store.findAll('payment-method');
-    },
+    // model() {
+    //     return this.store.findAll('payment-method');
+    // },
 
     setupController(controller, model) {
         // Call _super for default behavior

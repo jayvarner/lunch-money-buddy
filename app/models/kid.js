@@ -6,6 +6,9 @@ export default DS.Model.extend({
     school: DS.attr('string'),
     balance: DS.attr('number'),
     autopay: DS.attr('boolean'),
+    ignoreBalance: DS.attr('boolean', {
+        defaultValue: true
+    }),
     default_method: DS.attr('string'),
     lunches: DS.hasMany('lunch'),
     balanceClass: Ember.computed(function low() {
@@ -14,7 +17,7 @@ export default DS.Model.extend({
         }
         return 'goodbalance'
     }).property('balance'),
-    showBalanceModal: Ember.computed(function shwo() {
+    showBalanceModal: Ember.computed(function show() {
         if (this.get('balance') < 20) {
             return true;
         }

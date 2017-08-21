@@ -13,12 +13,12 @@
 .
   </div>
 {{!-- </div> --}}
-{{#each model as |method|}}
+{{#each model.methods as |method|}}
 {{!-- <div class='row'> --}}
 {{#unless method.isDeleted}}
 {{#if method.id}}
   <div class='one-fifth' style='text-align:center;'>
-    <input type='radio' name='defaultmethod' checked={{if (eq kid.default_method method.id) 'checked'}} value={{method.id}} onchange={{action (mut kid.default_method) method.id}}/>
+    <input type='radio' name='defaultmethod' checked={{if (eq model.kid.default_method method.id) 'checked'}} value={{method.id}} onchange={{action (mut model.kid.default_method) method.id}}/>
   </div>
   <div class='two-fifths'>
     {{method.methodtype}}
@@ -45,7 +45,7 @@
 {{!-- </div> --}}
 {{!-- <div class='row' style='padding-top:1em;'> --}}
 <div class='one-fifth' style='text-align:center;'>
-  {{mdl-switch value=kid.autopay action=(toggle kid.autopay)}}
+  {{mdl-switch value=model.kid.autopay action=(toggle model.kid.autopay)}}
 </div>
 <div class='three-fifths'>
     Auto Pay
@@ -59,13 +59,11 @@
 </div>
 <div class='whole' style='text-align:center'>
   {{#link-to 'kid.methods.new'}}{{mdl-button isRaised=true text='New Method' isAccent=true}}{{/link-to}}
-
+  {{#link-to 'kid'}}{{mdl-button class='flat' text='cancel' isAccent=true}}{{/link-to}}
 </div>
 </div>
 
-{{#modal-dialog
-    onClose=(action (mut isShowingBasic) false)
-}}
+{{#modal-dialog onClose=(action (mut isShowingBasic) false)}}
   <h1>Stop! Modal Time!</h1>
   <p>Basic</p>
   <button onclick={{action (mut isShowingBasic) false}}>Close</button>

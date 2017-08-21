@@ -5,6 +5,7 @@
     <div class="camera"></div>
     <div class="screen grid">
       {{!-- {{#if globals.authenticated}} --}}
+      <i class="material-icons" class='backbutton' onclick={{action (route-action 'back')}}>keyboard_arrow_left</i>
       {{#mdl-nav title='Lunch Money Buddy' fixedHeader=true}}
         {{mdl-nav-item name='Kids'   route='kids'}}
         {{mdl-nav-item name='Account'      route=''}}
@@ -17,14 +18,18 @@
           {{outlet}}
       {{/mdl-nav}}
       {{#mdl-mini-footer}}
-  {{!-- {{#mdl-footer-linklist}} --}}
+  {{#mdl-footer-linklist}}
+  <li>
     {{#link-to 'kids'}}
-      <i class="material-icons">group</i> KIDS
+      KIDS
     {{/link-to}}
-    {{#link-to 'index'}}
-      <i class="material-icons">restaurant_menu</i> LUNCHES
+  </li>
+  <li>
+    {{#link-to 'profile'}}
+      POFILE
     {{/link-to}}
-  {{!-- {{/mdl-footer-linklist}} --}}
+  </li>
+  {{/mdl-footer-linklist}}
 {{/mdl-mini-footer}}
     </div>
 </div>

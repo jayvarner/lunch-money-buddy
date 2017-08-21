@@ -1,0 +1,126 @@
+{{outlet}}
+<div class='row profile-screen'>
+
+  <div class='whole'>
+    {{#link-to 'index'}}Log Out{{/link-to}}
+  </div>
+<div class='whole'><hr /></div>
+  <div class='two-thirds profile-head'>
+    Subsidy Status {{mdl-icon icon='help_outline' id='sub-help' class='help'}}
+    {{#mdl-tooltip for='sub-help'}}Some helpful text about school lunch subsidies.{{/mdl-tooltip}}
+  </div>
+  <div class='one-third'>
+    {{input type='checkbox'}}
+  </div>
+<div class='whole'><hr /></div>
+  <div class='whole'>
+    Notifications
+  </div>
+  <div class='whole sub'>
+    Low balance
+  </div>
+  <div class='two-thirds'>
+    Email
+  </div>
+  <div class='one-third'>
+    {{input type='checkbox'}}
+  </div>
+  <div class='two-thirds'>
+    Text
+  </div>
+  <div class='one-third'>
+    {{input type='checkbox'}}
+  </div>
+  <div class='two-thirds'>
+    Frequency
+  </div>
+  <div class='one-third'>
+    <select>
+      <option>
+        Daily
+      </option>
+      <option>
+        Weekly
+      </option>
+      <option>
+        Monthly
+      </option>
+    </select>
+  </div>
+  <div class='whole sub'>
+    Favorite Meals
+  </div>
+  <div class='two-thirds'>
+    Email
+  </div>
+  <div class='one-third'>
+    {{input type='checkbox'}}
+  </div>
+  <div class='two-thirds'>
+    Text
+  </div>
+  <div class='one-third'>
+    {{input type='checkbox'}}
+  </div>
+  <div class='two-thirds'>
+    Frequency
+  </div>
+  <div class='one-third'>
+    <select>
+      <option>
+        Daily
+      </option>
+      <option>
+        Weekly
+      </option>
+      <option>
+        Monthly
+      </option></select>
+  </div>
+  <div class='whole'><hr /></div>
+
+  <div class='one-third code'>
+    Add Access Code
+  </div>
+  <div class='one-third'>
+    {{input}}
+  </div>
+  <div class='one-third'>
+    {{mdl-icon icon='help_outline' id='secondcode' class='help'}}
+    {{#mdl-tooltip for='secondcode'}}Some helpful text about adding an additional access code.{{/mdl-tooltip}}
+  </div>
+  <div class='whole'><hr /></div>
+  <div class='whole'>
+    Partners
+  </div>
+  <div class='two-thirds'>
+    Samantha
+  </div>
+  <div class='one-third'>
+    {{mdl-icon icon='help_outline' id='partner' class='help'}}
+    {{#mdl-tooltip for='partner'}}Some helpful text about partners.{{/mdl-tooltip}}
+  </div>
+  <div class='whole'><hr /></div>
+  <div class='whole'>
+    Close Account
+  </div>
+  <div class='whole'>
+    /
+  </div>
+  <div class='whole'>
+    /
+  </div>
+  <div class='whole'>
+    /
+  </div>
+</div>
+{{#modal-dialog onClose=(action (mut isShowingBasic) false)}}
+  <h3>Profile Settings</h3>
+  <p>Here, a caretaker will be able to set method and frequency of notifications for low balances and when a child's favorite meal is being served.</p>
+  <p>
+    I've provided a space to add additional access codes. Instead of an access code per family, there should be an access per child. It is very possiable that someone could be a care taker of a biological child and a step child in the same system.
+  </p>
+  <p>
+    One can also see partner caretakers who also have access to their childeren's info. Add/removing partners is a pretty sensitive function and that policy should be accessable here.
+  </p>
+{{/modal-dialog}}

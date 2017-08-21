@@ -10,7 +10,7 @@
     </div>
     <br />
   <h3>{{model.name}}
-  <div class='one-fifth {{if (array-contains lunch.kidIds kid.id) 'favorite'}}' onclick={{action (route-action 'addFavorite' kid=kid.id lunch=lunch.id)}}>
+  <div class='one-fifth {{if (array-contains lunch.kidIds model.kid.id) 'favorite'}}' onclick={{action (route-action 'addFavorite' kid=model.kid.id lunch=lunch.id)}}>
 
     <i class="material-icons">favorite</i>
   </div></h3>

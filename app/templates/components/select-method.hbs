@@ -1,0 +1,6 @@
+<h5>&nbsp;</h5>
+Method: <select>
+  {{#each model.methods as |method|}}
+  <option value=method.id selected={{if (eq method.id model.kid.default_method ) 'selected'}}>{{method.methodtype}}</option>
+{{/each}}
+</select>

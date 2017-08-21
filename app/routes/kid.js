@@ -10,7 +10,11 @@ export default Route.extend(SessionMixin, {
     },
 
     model(params) {
-        return this.store.findRecord('kid', params.kid_id);
+        return Ember.RSVP.hash({
+            kid: this.store.findRecord('kid', params.kid_id),
+            methods: this.store.findAll('payment-method'),
+            lunches: this.store.findAll('lunch')
+        });
     },
 
     actions: {

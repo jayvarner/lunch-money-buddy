@@ -1,13 +1,13 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-    model() {
-        return this.store.findAll('lunch');
-    },
-
-    afterMode() {
-        Ember.$('.is-active').click();
-    },
+    // model() {
+    //     return this.store.findAll('lunch');
+    // },
+    //
+    // afterMode() {
+    //     Ember.$('.is-active').click();
+    // },
 
     setupController(controller, model) {
         // Call _super for default behavior

@@ -91,7 +91,11 @@ a {
 }
 
 h5 {
-  margin-top: 0;
+  margin-top: .75em;
+  margin-left: .75em !important;
+  text-transform: uppercase;
+  color: grey;
+  text-align: left;
 }
 
 .row {
@@ -113,6 +117,7 @@ h5 {
     padding: 0;
     font-size: .75em;
     margin-bottom: .75em;
+    margin-left: .75em;
 
     .icon {
       // font-size: 1em;
@@ -153,7 +158,7 @@ h5 {
 footer {
   z-index: 999;
   &.row {
-    height: 3em;
+    height: 2em;
     padding: 0 !important;
   }
   .half {
@@ -194,10 +199,9 @@ footer {
     position: absolute;
     left: 0;
     bottom: 0;
-    height: 3em;
     width: 100%;
     padding: 1em 0 !important;
-
+    text-align: center;
     a {
       color: $light-grey;
     }
@@ -242,6 +246,7 @@ footer {
 }
 
 .mdl-mini-footer--link-list {
+  padding: 0 96px;
   a {
     z-index: 99999999;
   }
@@ -347,6 +352,9 @@ td {
 .ember-modal-wrapper {
   position: absolute;
   left: 500px;
+  width: 300px;
+  padding-left: 1em;
+  border-left: solid $red;
 }
 
 .mdl-switch {
@@ -356,4 +364,74 @@ td {
 .golden-small,
 .golden-large {
   color: $dark-grey;
+}
+
+.mdl-tabs__tab-bar {
+  border: 0;
+}
+
+h5.month {
+  padding: auto 0;
+  text-align: center;
+  margin-bottom: 0;
+  font-size: 1em;
+}
+
+.mdl-layout__header .mdl-layout__drawer-button {
+  display: none !important;
+}
+
+.backbutton {
+  position: absolute;
+z-index: 99;
+top: 20px;
+left: 1em;
+cursor: pointer;
+color: white;
+font-size: 1.5em;
+font-weight: bolder;
+}
+
+#sub-help,
+#partner,
+#secondcode {
+  font-size: 18px;
+    float: none;
+    padding: 0;
+}
+
+.profile-screen {
+  div {
+    margin-bottom: .5em;
+  }
+
+  .profile-head {
+    font-size: 1em !important;
+  }
+
+  .whole {
+    text-transform: uppercase;
+
+    &.sub {
+      text-transform: none;
+    }
+  }
+
+  .two-thirds,
+  .code {
+    color: $dark-grey !important;
+    text-align: left !important;
+    font-size: .75em;
+  }
+
+  .one-third {
+    text-align: right;
+    color: black;
+  }
+
+  input[type=checkbox] {
+    font-weight: bolder;
+    color: black;
+
+  }
 }

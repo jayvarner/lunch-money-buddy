@@ -31,6 +31,7 @@ Router.map(function() {
   this.route('404', {
       path: '/*wildcard'
     });
+  this.route('profile');
 });
 
 export default Router;
