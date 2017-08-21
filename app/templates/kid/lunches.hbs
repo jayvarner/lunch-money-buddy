@@ -1,0 +1,40 @@
+{{outlet}}
+{{#mdl-tabs active='List'}}
+  {{#mdl-tab title='List' class='is-active' isActive=true}}
+  <h5 style='margin:1em 0;'>September 2017</h5>
+
+<div class='row lunch-list'>
+  {{#each model as |lunch index|}}
+  {{#link-to 'kid.lunches.lunch' lunch.id}}
+  <div class='one-fifth' style='line-height: 28px;'>
+    {{lunch.nday}}
+  </div>
+  <div class='three-fifths' style='line-height: 28px;'>
+    {{lunch.name}}
+  </div>
+  {{/link-to}}
+  <div class='one-fifth {{if (array-contains lunch.kidIds kid.id) 'favorite'}}' onclick={{action (route-action 'addFavorite' kid=kid.id lunch=lunch.id)}}>
+
+    <i class="material-icons">favorite</i>
+  </div>
+  {{/each}}
+
+</div>
+
+  {{/mdl-tab}}
+  {{#mdl-tab title='Month'}}
+  <h5 style='margin:1em 0;'>September 2017</h5>
+  <div class='row content-table calendar'>
+    <div class='one-fifth'>M</div><div class='one-fifth'>Tu</div><div class='one-fifth'>W</div><div class='one-fifth'>Th</div><div class='one-fifth'>F</div>
+    {{#each model as |lunch index|}}
+
+  <div class='one-fifth {{if (array-contains lunch.kidIds kid.id) 'favorite'}}'>
+    <i class="material-icons">{{if (array-contains lunch.kidIds kid.id) 'favorite'}}</i>
+    {{!-- {{if (lt kid.balance 1) 0}}{{kid.balance}} --}}
+    {{#link-to 'kid.lunches.lunch' lunch.id}}{{lunch.nday}}{{/link-to}}
+  </div>
+
+  {{/each}}
+  </div>
+  {{/mdl-tab}}
+{{/mdl-tabs}}

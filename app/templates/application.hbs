@@ -1,0 +1,30 @@
+<div class="marvel-device nexus5">
+    <div class="top-bar"></div>
+    <div class="sleep"></div>
+    <div class="volume"></div>
+    <div class="camera"></div>
+    <div class="screen grid">
+      {{!-- {{#if globals.authenticated}} --}}
+      {{#mdl-nav title='Lunch Money Buddy' fixedHeader=true}}
+        {{mdl-nav-item name='Kids'   route='kids'}}
+        {{mdl-nav-item name='Account'      route=''}}
+        {{mdl-nav-item name='Logout'       route=''}}
+        {{!-- {{#mdl-menu align='top-right' class='right'}}
+  {{#mdl-menu-item action='menuItemClicked' amount=36.12}}Amount: 36.12{{/mdl-menu-item}}
+  {{#mdl-menu-item action='menuItemClicked' amount=4.22}}Amount: 4.22{{/mdl-menu-item}}
+  {{#mdl-menu-item action='menuItemClicked' amount=7.11}}Amount: 7.11{{/mdl-menu-item}}
+{{/mdl-menu}} --}}
+          {{outlet}}
+      {{/mdl-nav}}
+      {{#mdl-mini-footer}}
+  {{!-- {{#mdl-footer-linklist}} --}}
+    {{#link-to 'kids'}}
+      <i class="material-icons">group</i> KIDS
+    {{/link-to}}
+    {{#link-to 'index'}}
+      <i class="material-icons">restaurant_menu</i> LUNCHES
+    {{/link-to}}
+  {{!-- {{/mdl-footer-linklist}} --}}
+{{/mdl-mini-footer}}
+    </div>
+</div>

@@ -1,0 +1,34 @@
+<style>.mdl-layout__header, .mdl-mini-footer { display: none;}</style>
+<div class='modal {{if showSignUpModal 'showing'}}'>
+  <div class='modal-content'>
+    <div class='row'>
+      {{mdl-icon icon='check_circle'}}
+    </div>
+      <h3>Account Confirmed</h3>
+    <div class='row'>
+      {{mdl-button isRaised=true text='Login' isAccent=true action='login'}}
+    </div>
+  </div>
+</div>
+
+
+<h5>Welcome To</h5>
+{{#login-form}}
+<div class='row content-table'>
+  <div class='whole'>
+    {{mdl-textfield label='Password' value='jorge@hawalius.com' disabled='disabled'}}
+  </div>
+  <div class='whole'>
+    {{mdl-textfield label='Password' value='************' disabled='disabled'}}
+  </div>
+  <div class='four-fifths'>
+    {{mdl-textfield label='Access Code' value='12345678' disabled='disabled'}}
+  </div>
+  <div class='one-fifth'>
+    {{mdl-icon icon='help_outline' id='mike' class='help'}}
+    {{#mdl-tooltip for='mike'}}See original letter for your family’s access code. Contact Stankonia Public Schools 404-355-2121{{/mdl-tooltip}}
+  </div>
+</div>
+
+{{mdl-button action=(toggle "showSignUpModal" this)isRaised=true text='Sign up' isAccent=true}}
+{{/login-form}}

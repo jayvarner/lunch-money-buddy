@@ -1,0 +1,12 @@
+{{#login-form}}
+{{mdl-textfield label='Password' value='jorge@hawalius.com' disabled='disabled'}}
+{{mdl-textfield label='Password' value='************' disabled='disabled'}}
+{{#link-to 'kids'}}
+{{mdl-button isRaised=true text='Login' isAccent=true}}
+{{/link-to}}
+<section>
+  {{#link-to 'pwreset'}}{{#mdl-button}}Forgot Password?{{/mdl-button}}{{/link-to}}
+  {{#link-to 'sign-up'}}{{#mdl-button}}Don't have an account?{{/mdl-button}}{{/link-to}}
+</section>
+{{/login-form}}
+{{outlet}}

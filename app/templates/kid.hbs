@@ -1,0 +1,11 @@
+<div class='row header'>
+  <div class='golden-small'>
+    {{#link-to 'kid'}}{{mdl-icon icon='face' class='profile'}}{{/link-to}}
+  </div>
+  <div class='golden-large'>
+    <h3>{{if model.name model.name}}</h3>
+    {{model.school}}
+  </div>
+</div>
+{{flash-message}}
+{{outlet}}

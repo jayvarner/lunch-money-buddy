@@ -1,0 +1,14 @@
+<h5>Add New Method</h5>
+{{#unless model..methodmethodtype}}
+<select id='newoption' onchange={{action (mut model.methodmethodtype) value='target.value'}}>
+  <option>Select Method</option>
+  <option value='Visa'>Visa</option>
+  <option value='Master Card'>Master Card</option>
+  <option value='PayPal'>PayPal</option>
+    <option value='Checking'>Checking</option>
+</select>
+{{else}}
+{{#method-form model=model.method}}
+
+{{/method-form}}
+{{/unless}}

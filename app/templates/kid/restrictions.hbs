@@ -1,0 +1,9 @@
+{{outlet}}
+<div class='row'>
+  {{#each model as |r|}}
+  <div class='whole'>
+    {{input type='checkbox' checked=r.active}}
+    {{r.name}}
+  </div>
+  {{/each}}
+</div>
