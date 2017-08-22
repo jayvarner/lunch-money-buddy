@@ -30,8 +30,8 @@
     {{#mdl-tooltip for='cvv'}}Amazing how hard it is to find boilerplate text for a CVV help tip.{{/mdl-tooltip}}
   </div>
   {{/if}}
-  <div class='row'>
+  <div class='row' style='width: 100%;'>
     {{mdl-button action=(route-action 'save' model.) isRaised=true text='Save' isAccent=true class='one-third'}}
-    {{#mdl-button isColored=false class='one-quarter' action=(route-action 'back')}}Cancel{{/mdl-button}}    
+    {{#mdl-button isColored=false class='one-quarter' action=(route-action 'back')}}Cancel{{/mdl-button}}
   </div>
 </div>
