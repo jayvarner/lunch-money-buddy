@@ -4,10 +4,10 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'lunch-money-budy',
     environment: environment,
-    // rootURL: '/lunch-money-buddy',
-    // locationType: 'hash',
-    rootURL: '/',
-    locationType: 'auto',
+    rootURL: '/lunch-money-buddy',
+    locationType: 'hash',
+    // rootURL: '/',
+    // locationType: 'auto',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build

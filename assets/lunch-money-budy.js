@@ -4310,6 +4310,6 @@ catch(err) {
 });
 
 if (!runningTests) {
-  require("lunch-money-budy/app")["default"].create({"LOG_TRANSITIONS":true,"API_HOST":"http://lmb.ecdsweb.org","name":"lunch-money-budy","version":"0.0.0+65ac57b8"});
+  require("lunch-money-budy/app")["default"].create({"LOG_TRANSITIONS":true,"API_HOST":"http://lmb.ecdsweb.org","name":"lunch-money-budy","version":"0.0.0+d23ed0ad"});
 }
 //# sourceMappingURL=lunch-money-budy.map
